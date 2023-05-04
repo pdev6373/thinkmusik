@@ -8,22 +8,45 @@
   padding: 109px 5.55555%;
 }
 
+.plan {
+  background-color: #111f39;
+}
+
 .offer {
   background-color: #111f39;
   padding: 63px 5.55555% 55px;
 }
 
+.expectation,
+.generation,
+.plan {
+  padding: 95px 5.55555% 258px;
+}
+
+.expectationTextWrapper {
+  padding-inline: 5.55555%;
+}
+
+.generation {
+  padding-inline: 0;
+}
+
 @media (max-width: 1250px) {
   .howItWorks,
   .step,
-  .offer {
+  .offer,
+  .expectation,
+  .expectationTextWrapper {
     padding-inline: max(3%, 20px);
   }
 }
 
 .howItWorksTextWrapper,
 .stepTextWrapper,
-.offerTextWrapper {
+.offerTextWrapper,
+.planTextWrapper,
+.expectationTextWrapper,
+.generationTextWrapper {
   max-width: 780px;
   margin-inline: auto;
   text-align: center;
@@ -31,12 +54,20 @@
 
 .howItWorksHeading,
 .stepHeading,
-.offerHeading {
+.offerHeading,
+.planHeading,
+.expectationHeading,
+.generationHeading {
   color: #05274c;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.3958;
   margin-bottom: 25px;
+}
+
+.expectationHeading,
+.generationHeading {
+  margin-bottom: 13px;
 }
 
 .offerHeading {
@@ -50,18 +81,24 @@
 @media (max-width: 650px) {
   .howItWorksHeading,
   .stepHeading,
-  .offerHeading {
+  .offerHeading,
+  .planHeading,
+  .expectationHeading,
+  .generationHeading {
     font-size: 36px;
   }
 
   .step {
-    padding: 40px;
+    padding-block: 40px;
   }
 }
 
 .howItWorksBody,
 .stepBody,
-.offerBody {
+.offerBody,
+.expectationBody,
+.generationBody,
+.planBody {
   color: #05274c;
   font-weight: 400;
   font-size: 20px;
@@ -72,13 +109,18 @@
 @media (max-width: 450px) {
   .howItWorksBody,
   .stepBody,
-  .offerBody {
+  .offerBody,
+  .expectationBody,
+  .generationBody,
+  .planBody {
     font-size: 18px;
   }
 }
 
 .offerHeading,
-.offerBody {
+.offerBody,
+.planHeading,
+.planBody {
   color: #fff;
 }
 
@@ -92,6 +134,11 @@
   }
 }
 
+.expectationImageWrapper {
+  position: unset !important;
+  width: 100%;
+}
+
 .confidenceImageWrapper {
   position: unset !important;
   width: 90%;
@@ -99,7 +146,8 @@
   margin-inline: auto;
 }
 
-.confidenceImage {
+.confidenceImage,
+.expectationImage {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;
@@ -158,4 +206,110 @@
   .allCoursesLink {
     margin-top: 20px;
   }
+}
+
+.expectationBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.expectationBox {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 20px 0px #d0d7e94d;
+  gap: 18px;
+  padding: 18px 21px;
+  border-radius: 10px;
+  border: 1px solid rgba(5, 39, 76, 0.1);
+  cursor: pointer;
+}
+
+.expectationBoxCurrent {
+  border: 1px solid #3375d9;
+  background-color: #ebf5fe;
+}
+
+.expectationHeader {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #05274c;
+}
+
+.expectationBoxCurrent .expectationHeader {
+  font-weight: 700;
+}
+
+.expectationHeaderBody {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.392857;
+  color: #05274c;
+  margin-bottom: 13px;
+}
+
+.expectationBodyText {
+  color: #05274c;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 44px;
+  line-height: 1.6;
+}
+
+.expectationMain {
+  display: flex;
+  gap: 56px;
+}
+
+.expectationDetails {
+  box-shadow: 0px 3.8656537532806396px 44.384918212890625px 0px #d0d7e9cc;
+  flex-grow: 1;
+  padding: 46px 64px 57px;
+  border-radius: 15px;
+}
+
+@media (max-width: 1000px) {
+  .expectationDetails {
+    padding: 30px;
+  }
+
+  .expectationBox {
+    padding: 10px 20px;
+  }
+
+  .expectationMain {
+    gap: 30px;
+  }
+
+  .expectation,
+  .generation {
+    padding-block: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .expectationMain {
+    flex-direction: column;
+  }
+
+  .expectationBoxWrapper {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .expectationBoxWrapper > * {
+    flex-shrink: 0;
+  }
+}
+
+.bodyContainerWrapper {
+  background-color: #ebf5fe;
+  padding-block: 39px;
+}
+
+.instructors {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
 }

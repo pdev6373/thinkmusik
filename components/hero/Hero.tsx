@@ -135,6 +135,7 @@ export default function Hero() {
             header={item.header}
             image={item.image}
             shouldReverse={!!(index % 2)}
+            hasButton={true}
           />
         ))}
       </div>

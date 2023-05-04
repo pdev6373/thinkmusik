@@ -11,6 +11,7 @@ export interface BodyTypes {
 
 export interface BodyContainerTypes extends BodyTypes {
   shouldReverse: boolean;
+  hasButton: boolean;
 }
 
 export interface ButtonType {

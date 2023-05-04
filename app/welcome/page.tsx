@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 
-import { Card, Header, Hero } from "@/components";
+import { BodyContainer, Card, Header, Hero } from "@/components";
 import styles from "./page.module.css";
 
 import localFont from "next/font/local";
@@ -39,6 +39,52 @@ const cardDetails: CardTypes[] = [
   },
 ];
 
+const body = [
+  {
+    header: "Build connections right from your practice room",
+    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you’re hitting the right notes.",
+    image: "/image 747.png",
+  },
+  {
+    header: "Get access to music gigs and earn money",
+    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you’re hitting the right notes.",
+    image: "/image 746 (3).png",
+  },
+];
+
+const expectations = [
+  {
+    heading: "Multiple HD Angle",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    icon: "/play.svg",
+    image: "/big_guitar.png",
+  },
+  {
+    heading: "Modern Styles",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    icon: "/guitar_small.svg",
+    image: "/big_guitar.png",
+  },
+  {
+    heading: "Interactive Tabs",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    icon: "/music_list.svg",
+    image: "/big_guitar.png",
+  },
+  {
+    heading: "Track your progress",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    icon: "/user_play.svg",
+    image: "/big_guitar.png",
+  },
+  {
+    heading: "Personalized Feedback",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    icon: "/people.svg",
+    image: "/big_guitar.png",
+  },
+];
+
 const courses = [
   "/guitar_scroll.png",
   "/guitar_scroll2.png",
@@ -48,7 +94,18 @@ const courses = [
   "/guitar_scroll3.png",
 ];
 
+const instructors = [
+  "/image 741 (1).png",
+  "/image 741 (2).png",
+  "/image 741 (3).png",
+  "/image 741 (1).png",
+  "/image 741 (2).png",
+  "/image 741 (3).png",
+];
+
 export default function page() {
+  const [currentExpectation, setCurrentExpectation] = useState(expectations[0]);
+
   return (
     <div className={styles.welcome}>
       <Header />
@@ -149,21 +206,117 @@ export default function page() {
       </div>
 
       <div className={styles.expectation}>
-        <div className={styles.stepTextWrapper}>
-          <h3 className={`${styles.stepHeading} ${myFont.className}`}>
+        <div className={styles.expectationTextWrapper}>
+          <h3 className={`${styles.expectationHeading} ${myFont.className}`}>
             What to expect from each lesson
           </h3>
-          <p className={styles.stepBody}>
+          <p className={styles.expectationBody}>
             Pickup Music&#39;s learning features are designed to give you a
             guided, structured approach so you can make lasting progress.
           </p>
         </div>
 
-        <div className={styles.cardWrapper}>
-          {cardDetails.map((details, index) => (
-            <Fragment key={index}>
-              <Card header={details.header} body={details.body} />
-            </Fragment>
+        <div className={styles.expectationMain}>
+          <div className={styles.expectationBoxWrapper}>
+            {expectations.map((expectation) => (
+              <div
+                className={
+                  expectation.heading === currentExpectation.heading
+                    ? `${styles.expectationBox} ${styles.expectationBoxCurrent}`
+                    : styles.expectationBox
+                }
+                onClick={() => setCurrentExpectation(expectation)}
+              >
+                <Image
+                  src={expectation.icon}
+                  alt="expecttion icon"
+                  width={48}
+                  height={48}
+                />
+                <h3
+                  className={`${myFont.className} ${styles.expectationHeader}`}
+                >
+                  {expectation.heading}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.expectationDetails}>
+            <h3
+              className={`${myFont.className} ${styles.expectationHeaderBody}`}
+            >
+              {currentExpectation.heading}
+            </h3>
+            <p className={styles.expectationBodyText}>
+              {currentExpectation.body}
+            </p>
+            <div className={styles.expectationImageWrapper}>
+              <Image
+                src={currentExpectation.image}
+                alt="expection image"
+                fill
+                className={styles.expectationImage}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.bodyContainerWrapper}>
+        {body.map((item, index) => (
+          <BodyContainer
+            key={index}
+            body={item.body}
+            header={item.header}
+            image={item.image}
+            shouldReverse={!!(index % 2)}
+            hasButton={false}
+          />
+        ))}
+      </div>
+
+      <div className={styles.generation}>
+        <div className={styles.generationTextWrapper}>
+          <h3 className={`${styles.generationHeading} ${myFont.className}`}>
+            Learn from a new <br /> generation of Musicians
+          </h3>
+          <p className={styles.generationBody}>
+            Here are just a few of our incredible instructors.
+          </p>
+        </div>
+
+        <div className={styles.instructors}>
+          {instructors.map((instructor) => (
+            <Image
+              src={instructor}
+              alt="instructor image"
+              width={377}
+              height={590}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.plan}>
+        <div className={styles.planTextWrapper}>
+          <h3 className={`${styles.planHeading} ${myFont.className}`}>
+            Choose a plan that's <br />
+            right for you
+          </h3>
+          <p className={styles.planBody}>
+            Here are just a few of our incredible instructors.
+          </p>
+        </div>
+
+        <div className={styles.instructors}>
+          {instructors.map((instructor) => (
+            <Image
+              src={instructor}
+              alt="instructor image"
+              width={377}
+              height={590}
+            />
           ))}
         </div>
       </div>

@@ -11,6 +11,7 @@ export default function BodyContainer({
   body,
   image,
   shouldReverse,
+  hasButton,
 }: BodyContainerTypes) {
   const handleStartLearning = () => {};
 
@@ -23,7 +24,12 @@ export default function BodyContainer({
       <div>
         <h3 className={`${styles.header} ${myFont.className}`}>{header}</h3>
         <p className={styles.body}>{body}</p>
-        <SecondaryButton text="Start Learning" onClick={handleStartLearning} />
+        {hasButton && (
+          <SecondaryButton
+            text="Start Learning"
+            onClick={handleStartLearning}
+          />
+        )}
       </div>
 
       <div className={styles.imageWrapper}>
