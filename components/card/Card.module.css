@@ -1,0 +1,29 @@
+.wrapper {
+  background-color: #05274c;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.wrapperInner {
+  transform: translate(-4px, -4px);
+  padding: 38px 32px;
+  background-color: #fff;
+  box-shadow: 0px 4px 40px 0px #d0d7e980;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #05274c;
+  margin-bottom: 8px;
+}
+
+.body {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #3f3f46;
+}

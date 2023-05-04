@@ -1,0 +1,161 @@
+.howItWorks {
+  background-color: #ebf5fe;
+  padding: 64px 5.55555% 74px;
+}
+
+.step {
+  background-color: #fbf9f6;
+  padding: 109px 5.55555%;
+}
+
+.offer {
+  background-color: #111f39;
+  padding: 63px 5.55555% 55px;
+}
+
+@media (max-width: 1250px) {
+  .howItWorks,
+  .step,
+  .offer {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+.howItWorksTextWrapper,
+.stepTextWrapper,
+.offerTextWrapper {
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.howItWorksHeading,
+.stepHeading,
+.offerHeading {
+  color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.3958;
+  margin-bottom: 25px;
+}
+
+.offerHeading {
+  margin-bottom: 0;
+}
+
+.offerHeadingWrapper {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 650px) {
+  .howItWorksHeading,
+  .stepHeading,
+  .offerHeading {
+    font-size: 36px;
+  }
+
+  .step {
+    padding: 40px;
+  }
+}
+
+.howItWorksBody,
+.stepBody,
+.offerBody {
+  color: #05274c;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 59px;
+}
+
+@media (max-width: 450px) {
+  .howItWorksBody,
+  .stepBody,
+  .offerBody {
+    font-size: 18px;
+  }
+}
+
+.offerHeading,
+.offerBody {
+  color: #fff;
+}
+
+.offerBody {
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .offerBody {
+    margin-bottom: 59px;
+  }
+}
+
+.confidenceImageWrapper {
+  position: unset !important;
+  width: 90%;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.confidenceImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  gap: 4.1667vw;
+}
+
+@media (max-width: 380px) {
+  .cardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.coursesWrapperImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.coursesWrapper {
+  position: unset !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 377px;
+}
+
+.allCoursesLinkWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.allCoursesLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 17.5px 46px;
+  border: 1px solid #3375d9;
+  border-radius: 50px;
+  color: #fff;
+  background-color: transparent;
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .allCoursesLink {
+    margin-top: 20px;
+  }
+}
