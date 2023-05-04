@@ -385,16 +385,16 @@
   margin-bottom: 24px;
 }
 
-.planPrice {
-  display: flex;
-  align-items: flex-end;
+.planPriceWrapper {
+  margin-bottom: 48px;
+}
 
+.planPrice {
   font-weight: 700;
   font-size: 32px;
   line-height: 1.15625;
 
   color: #27272a;
-  margin-bottom: 48px;
 }
 
 .planPriceAccent {
@@ -469,12 +469,6 @@
     width: 100%;
     max-width: 100%;
     text-align: center;
-  }
-
-  .planPrice {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .planInfo {

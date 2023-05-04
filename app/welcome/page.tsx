@@ -396,6 +396,7 @@ export default function Welcome() {
         <div className={styles.allPlans}>
           {allPlans.map((plan, index) => (
             <div
+              key={index}
               className={`${styles.planButton} ${myFont.className} ${
                 !index ? styles.currentPlanButton : ""
               }`}
@@ -412,12 +413,16 @@ export default function Welcome() {
                 {allPlans[0].type} Plan
               </h3>
               <p className={styles.planText}>{allPlans[0].access}</p>
-              <p className={`${styles.planPrice} ${myFont.className}`}>
-                {allPlans[0].price}/
-                <p className={`${styles.planPriceAccent} ${myFont.className}`}>
+              <div className={styles.planPriceWrapper}>
+                <span className={`${styles.planPrice} ${myFont.className}`}>
+                  {allPlans[0].price}/
+                </span>
+                <span
+                  className={`${styles.planPriceAccent} ${myFont.className}`}
+                >
                   mo
-                </p>
-              </p>
+                </span>
+              </div>
 
               <MainButton onClick={() => {}} text="Start Learning" />
             </div>
@@ -504,7 +509,7 @@ export default function Welcome() {
 
           <div className={styles.questionWrapper}>
             {allQuestions.map((question) => (
-              <div className={styles.question}>
+              <div className={styles.question} key={question}>
                 <p className={styles.questionText}>{question}</p>
                 <Image
                   src="/Right 24px.svg"
@@ -537,14 +542,16 @@ export default function Welcome() {
           <div className={styles.footerNavWrapper}>
             {footerItems.map((item) => {
               return (
-                <div>
+                <div key={item.title}>
                   <h3 className={`${styles.footerTitle} ${myFont.className}`}>
                     {item.title}
                   </h3>
 
                   <div className={styles.footerItemWrapper}>
                     {item.content.map((item) => (
-                      <p className={styles.footerItem}>{item}</p>
+                      <p className={styles.footerItem} key={item}>
+                        {item}
+                      </p>
                     ))}
                   </div>
                 </div>
