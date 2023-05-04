@@ -9,3 +9,8 @@
   font-weight: 500;
   line-height: var(--line-height);
 }
+
+.buttonBlack {
+  color: #3f3f46;
+  border: 1px solid #3f3f46;
+}

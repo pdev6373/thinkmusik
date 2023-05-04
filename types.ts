@@ -18,6 +18,7 @@ export interface ButtonType {
   text: string;
   onClick: any;
   type?: "small" | "large";
+  isBlack?: boolean;
 }
 
 export interface CardTypes {
