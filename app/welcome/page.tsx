@@ -81,7 +81,7 @@ export default function page() {
           </h3>
           <p className={styles.stepBody}>
             Whether you&#39;re just starting out or you already have some skills
-            – we've got the right learning pathway for you.
+            – we&#39;ve got the right learning pathway for you.
           </p>
         </div>
 
@@ -154,8 +154,8 @@ export default function page() {
             What to expect from each lesson
           </h3>
           <p className={styles.stepBody}>
-            Pickup Music's learning features are designed to give you a guided,
-            structured approach so you can make lasting progress.
+            Pickup Music&#39;s learning features are designed to give you a
+            guided, structured approach so you can make lasting progress.
           </p>
         </div>
 
