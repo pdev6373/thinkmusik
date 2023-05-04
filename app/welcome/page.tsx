@@ -80,8 +80,8 @@ export default function page() {
             Step-by-step learning
           </h3>
           <p className={styles.stepBody}>
-            Whether you’re just starting out or you already have some skills –
-            we've got the right learning pathway for you.
+            Whether you&#39;re just starting out or you already have some skills
+            – we've got the right learning pathway for you.
           </p>
         </div>
 
