@@ -103,7 +103,7 @@ const instructors = [
   "/image 741 (3).png",
 ];
 
-export default function page() {
+export default function Welcome() {
   const [currentExpectation, setCurrentExpectation] = useState(expectations[0]);
 
   return (
@@ -218,8 +218,9 @@ export default function page() {
 
         <div className={styles.expectationMain}>
           <div className={styles.expectationBoxWrapper}>
-            {expectations.map((expectation) => (
+            {expectations.map((expectation, index) => (
               <div
+                key={index}
                 className={
                   expectation.heading === currentExpectation.heading
                     ? `${styles.expectationBox} ${styles.expectationBoxCurrent}`
@@ -287,8 +288,9 @@ export default function page() {
         </div>
 
         <div className={styles.instructors}>
-          {instructors.map((instructor) => (
+          {instructors.map((instructor, index) => (
             <Image
+              key={index}
               src={instructor}
               alt="instructor image"
               width={377}
@@ -309,7 +311,7 @@ export default function page() {
           </p>
         </div>
 
-        <div className={styles.instructors}>
+        {/* <div className={styles.instructors}>
           {instructors.map((instructor) => (
             <Image
               src={instructor}
@@ -318,7 +320,7 @@ export default function page() {
               height={590}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
