@@ -42,12 +42,12 @@ const cardDetails: CardTypes[] = [
 const body = [
   {
     header: "Build connections right from your practice room",
-    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you’re hitting the right notes.",
+    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you're hitting the right notes.",
     image: "/image 747.png",
   },
   {
     header: "Get access to music gigs and earn money",
-    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you’re hitting the right notes.",
+    body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you're hitting the right notes.",
     image: "/image 746 (3).png",
   },
 ];
@@ -55,31 +55,31 @@ const body = [
 const expectations = [
   {
     heading: "Multiple HD Angle",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
     icon: "/play.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Modern Styles",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
     icon: "/guitar_small.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Interactive Tabs",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
     icon: "/music_list.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Track your progress",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
     icon: "/user_play.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Personalized Feedback",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you’re in the same room.",
+    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
     icon: "/people.svg",
     image: "/big_guitar.png",
   },
@@ -301,7 +301,7 @@ export default function page() {
       <div className={styles.plan}>
         <div className={styles.planTextWrapper}>
           <h3 className={`${styles.planHeading} ${myFont.className}`}>
-            Choose a plan that's <br />
+            Choose a plan that&#39;s <br />
             right for you
           </h3>
           <p className={styles.planBody}>
