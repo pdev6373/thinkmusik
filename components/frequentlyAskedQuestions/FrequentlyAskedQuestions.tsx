@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import MainButton from "../mainButton/MainButton";
-import SecondaryButton from "../secondaryButton/SecondaryButton";
 import styles from "./FrequentlyAskedQuestions.module.css";
 import localFont from "next/font/local";
 

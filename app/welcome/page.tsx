@@ -46,12 +46,12 @@ const body = [
   {
     header: "Build connections right from your practice room",
     body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you're hitting the right notes.",
-    image: "/image 747.png",
+    image: "/connection1.png",
   },
   {
     header: "Get access to music gigs and earn money",
     body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you're hitting the right notes.",
-    image: "/image 746 (3).png",
+    image: "/connection2.png",
   },
 ];
 

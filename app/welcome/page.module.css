@@ -21,16 +21,6 @@
   padding-inline: 5.55555%;
 }
 
-@media (max-width: 1250px) {
-  .howItWorks,
-  .step,
-  .offer,
-  .expectation,
-  .expectationTextWrapper {
-    padding-inline: max(3%, 20px);
-  }
-}
-
 .howItWorksTextWrapper,
 .stepTextWrapper,
 .offerTextWrapper,
@@ -254,6 +244,15 @@
   }
 }
 
+.bodyContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.4375em;
+  background-color: #ebf5fe;
+  padding: 1.520833em 5.55555% 2.75em;
+  font-size: clamp(36px, 3.3vw, 48px);
+}
+
 @media (max-width: 900px) {
   .expectationMain {
     flex-direction: column;
@@ -269,9 +268,21 @@
   }
 }
 
-.bodyContainerWrapper {
-  background-color: #ebf5fe;
-  padding-block: 39px;
+@media (max-width: 950px) {
+  .bodyContainerWrapper {
+    gap: 84px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .howItWorks,
+  .step,
+  .offer,
+  .expectation,
+  .expectationTextWrapper,
+  .bodyContainerWrapper {
+    padding-inline: max(3%, 20px);
+  }
 }
 
 @media (max-width: 650px) {
@@ -285,5 +296,11 @@
 
   .step {
     padding-block: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bodyContainerWrapper {
+    font-size: clamp(24px, 5.9vw, 36px);
   }
 }
