@@ -31,13 +31,14 @@ export default function FrequentlyAskedQuestions() {
             Frequently Asked Questions
           </h3>
           <p className={styles.questionsBody}>
-            If your questions aren't answered below, please chat with us.
+            If your questions aren&#39;t answered below, please chat with us.
           </p>
         </div>
 
         <div className={styles.actions}>
           {actions.map((action) => (
             <button
+              key={action}
               className={`${
                 currentAction === action ? styles.buttonCurrent : styles.button
               } ${myFont2.className}

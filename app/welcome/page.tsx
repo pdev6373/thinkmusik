@@ -56,31 +56,31 @@ const body = [
 const expectations = [
   {
     heading: "Multiple HD Angle",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
+    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
     icon: "/play.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Modern Styles",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
+    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
     icon: "/guitar_small.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Interactive Tabs",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
+    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
     icon: "/music_list.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Track your progress",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
+    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
     icon: "/user_play.svg",
     image: "/big_guitar.png",
   },
   {
     heading: "Personalized Feedback",
-    body: "See what the instructor sees. Multiple HD angles – so it feels like you're in the same room.",
+    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
     icon: "/people.svg",
     image: "/big_guitar.png",
   },
@@ -186,8 +186,8 @@ export default function Welcome() {
             Step-by-step learning
           </h3>
           <p className={styles.stepBody}>
-            Whether you're just starting out or you already have some skills -
-            we've got the right learning pathway for you.
+            Whether you&#39;re just starting out or you already have some skills
+            - we&#39;ve got the right learning pathway for you.
           </p>
         </div>
 
@@ -260,8 +260,8 @@ export default function Welcome() {
             What to expect from each lesson
           </h3>
           <p className={styles.expectationBody}>
-            Pickup Music's learning features are designed to give you a guided,
-            structured approach so you can make lasting progress.
+            Pickup Music&#39;s learning features are designed to give you a
+            guided, structured approach so you can make lasting progress.
           </p>
         </div>
 
@@ -352,7 +352,7 @@ export default function Welcome() {
       <div className={styles.plan}>
         <div className={styles.planTextWrapper}>
           <h3 className={`${styles.planHeading} ${myFont.className}`}>
-            Choose a plan that's <br />
+            Choose a plan that&#39;s <br />
             right for you
           </h3>
           <p className={styles.planBody}>
