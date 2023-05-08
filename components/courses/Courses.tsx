@@ -45,7 +45,6 @@ export default function Courses() {
         keyboard={true}
         slidesPerView="auto"
         spaceBetween={30}
-        className="mySwiper"
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       >
         {courses.map((course, index) => (
