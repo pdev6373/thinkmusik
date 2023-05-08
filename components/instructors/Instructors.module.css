@@ -83,4 +83,8 @@
   .generationHeading {
     margin-bottom: 19px;
   }
+
+  .generationBody {
+    font-size: 18px;
+  }
 }
