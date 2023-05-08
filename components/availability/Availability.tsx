@@ -24,12 +24,22 @@ export default function Availability() {
               Web, Mobile, Tablet
             </h3>
             <p className={styles.availabilityText}>
-              For Mobile and Tablet you can download via playstore or Appstore
-              below
+              For Mobile and Tablet you can download via <br /> playstore or
+              Appstore below
             </p>
             <div className={styles.platforms}>
-              <Image src="/google.svg" alt="google" width={176} height={54} />
-              <Image src="/apple.svg" alt="google" width={166} height={54} />
+              <Image
+                src="/google.svg"
+                alt="google"
+                fill
+                className={styles.platformImg}
+              />
+              <Image
+                src="/apple.svg"
+                alt="google"
+                fill
+                className={styles.platformImg}
+              />
             </div>
           </div>
         </div>

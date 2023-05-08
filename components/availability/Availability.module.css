@@ -1,11 +1,6 @@
 .callToActionOuter {
-  padding: 86px 5.55555% 118px;
-}
-
-@media (max-width: 1250px) {
-  .callToActionOuter {
-    padding-inline: max(3%, 20px);
-  }
+  font-size: clamp(36px, 3.3vw, 48px);
+  padding: 1.7916667em 5.55555% 2.45833em;
 }
 
 .callToAction {
@@ -15,18 +10,22 @@
 }
 
 .callToActionInner {
+  font-size: clamp(36px, 3.3vw, 48px);
   transform: translate(-8px, -8px);
-  padding: 38px 32px;
+  padding: 0.4166667em 1.145833333em;
   background-color: #fbf9f6;
   border: 1px solid #05274c;
   border-radius: 30px;
+  gap: 0.3em;
   display: flex;
+  align-items: center;
 }
 
 .laptopWrapper {
   position: unset !important;
-  width: 40%;
+  width: 44.87079%;
   max-width: 573px;
+  min-width: 500px;
 }
 
 .laptop {
@@ -37,40 +36,108 @@
 }
 
 .availabilityHeading {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 1.4;
-  text-align: center;
-  margin-bottom: 20px;
   color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  font-size: inherit;
+  line-height: 1.3958;
+  margin-bottom: 0.27083em;
+  text-align: center;
 }
 
 .availability {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
 }
 
 .availabilityText {
   font-weight: 400;
   font-size: 20px;
+  margin-bottom: 2.3em;
   line-height: 1.6;
   text-align: center;
   color: #05274c;
-  max-width: 410px;
-  margin-bottom: 28px;
 }
 
 .platforms {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 18px;
+  position: unset !important;
+  width: 100%;
 }
 
-/*  */
-@media (max-width: 480px) {
+.platformImg {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  max-width: 175px;
+}
+
+@media (max-width: 1250px) {
+  .callToActionOuter {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .callToActionInner {
+    padding: 0.4166667em;
+  }
+
+  .laptopWrapper {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 940px) {
+  .callToActionInner {
+    flex-direction: column-reverse;
+    transform: translate(0, 0);
+    background: #fff;
+    border: none;
+    gap: 1em;
+    padding: 0;
+  }
+
+  .callToAction {
+    background: #fff;
+  }
+
+  .laptopWrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: 573px;
+  }
+}
+
+@media (max-width: 650px) {
+  .callToActionOuter,
+  .callToActionInner {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+
+  .questionsBody {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 435px) {
+  .platformImg {
+    max-width: 150px;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 370px) {
   .platforms {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .platformImg {
+    max-width: 175px;
   }
 }

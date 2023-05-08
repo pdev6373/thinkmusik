@@ -11,7 +11,6 @@
   font-size: inherit;
   line-height: 1.3958;
   margin-bottom: 0.27083em;
-  margin-bottom: 13px;
   text-align: center;
 }
 
@@ -48,12 +47,6 @@
   max-width: 804px;
   margin-inline: auto;
 }
-
-/* @media (max-width: 810px) {
-  .actions > * {
-    min-width: 240px;
-  }
-} */
 
 .questionsBody {
   font-weight: 400;
