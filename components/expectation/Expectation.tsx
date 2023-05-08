@@ -53,9 +53,11 @@ export default function Expectation() {
       <div className={styles.expectationMain}>
         <div className={styles.expectationBoxWrapper}>
           {expectations.map((expectation, index) => (
-            <div className={!index ? styles.expectationBoxInner : ""}>
+            <div
+              className={!index ? styles.expectationBoxInner : ""}
+              key={index}
+            >
               <div
-                key={index}
                 //   className={
                 //     expectation.heading === currentExpectation.heading
                 //       ? `${styles.expectationBox} ${styles.expectationBoxCurrent}`
