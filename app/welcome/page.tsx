@@ -1,21 +1,20 @@
 "use client";
 
 import { CardTypes } from "@/types";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
 import {
   Availability,
   BodyContainer,
   Card,
+  Expectation,
   Footer,
   FrequentlyAskedQuestions,
   Header,
   Hero,
   Instructors,
-  MainButton,
   Plans,
-  SecondaryButton,
 } from "@/components";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,39 +54,6 @@ const body = [
   },
 ];
 
-const expectations = [
-  {
-    heading: "Multiple HD Angle",
-    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
-    icon: "/play.svg",
-    image: "/big_guitar.png",
-  },
-  {
-    heading: "Modern Styles",
-    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
-    icon: "/guitar_small.svg",
-    image: "/big_guitar.png",
-  },
-  {
-    heading: "Interactive Tabs",
-    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
-    icon: "/music_list.svg",
-    image: "/big_guitar.png",
-  },
-  {
-    heading: "Track your progress",
-    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
-    icon: "/user_play.svg",
-    image: "/big_guitar.png",
-  },
-  {
-    heading: "Personalized Feedback",
-    body: "See what the instructor sees. Multiple HD angles - so it feels like you're in the same room.",
-    icon: "/people.svg",
-    image: "/big_guitar.png",
-  },
-];
-
 const courses = [
   "/guitar_scroll.png",
   "/guitar_scroll2.png",
@@ -98,8 +64,6 @@ const courses = [
 ];
 
 export default function Welcome() {
-  const [currentExpectation, setCurrentExpectation] = useState(expectations[0]);
-
   return (
     <div className={styles.welcome}>
       <Header />
@@ -199,65 +163,7 @@ export default function Welcome() {
         </div>
       </div>
 
-      <div className={styles.expectation}>
-        <div className={styles.expectationTextWrapper}>
-          <h3 className={`${styles.expectationHeading} ${myFont.className}`}>
-            What to expect from each lesson
-          </h3>
-          <p className={styles.expectationBody}>
-            Pickup Music&#39;s learning features are designed to give you a
-            guided, structured approach so you can make lasting progress.
-          </p>
-        </div>
-
-        <div className={styles.expectationMain}>
-          <div className={styles.expectationBoxWrapper}>
-            {expectations.map((expectation, index) => (
-              <div
-                key={index}
-                className={
-                  expectation.heading === currentExpectation.heading
-                    ? `${styles.expectationBox} ${styles.expectationBoxCurrent}`
-                    : styles.expectationBox
-                }
-                onClick={() => setCurrentExpectation(expectation)}
-              >
-                <Image
-                  src={expectation.icon}
-                  alt="expecttion icon"
-                  width={48}
-                  height={48}
-                />
-                <h3
-                  className={`${myFont.className} ${styles.expectationHeader}`}
-                >
-                  {expectation.heading}
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          <div className={styles.expectationDetails}>
-            <h3
-              className={`${myFont.className} ${styles.expectationHeaderBody}`}
-            >
-              {currentExpectation.heading}
-            </h3>
-            <p className={styles.expectationBodyText}>
-              {currentExpectation.body}
-            </p>
-            <div className={styles.expectationImageWrapper}>
-              <Image
-                src={currentExpectation.image}
-                alt="expection image"
-                fill
-                className={styles.expectationImage}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Expectation />
       <div className={styles.bodyContainerWrapper}>
         {body.map((item, index) => (
           <BodyContainer

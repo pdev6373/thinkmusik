@@ -74,6 +74,7 @@
   position: relative !important;
   height: unset !important;
   max-width: 175px;
+  cursor: pointer;
 }
 
 @media (max-width: 1250px) {

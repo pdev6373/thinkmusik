@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import MainButton from "../mainButton/MainButton";
 import styles from "./Plans.module.css";
 import localFont from "next/font/local";
 import { useEffect, useState } from "react";

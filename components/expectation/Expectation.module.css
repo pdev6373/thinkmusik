@@ -1,0 +1,161 @@
+.expectation {
+  padding: 1.9791667em 5.55555% 5.375em;
+  font-size: clamp(36px, 3.3vw, 48px);
+}
+
+.expectationTextWrapper {
+  padding-inline: 5.55555%;
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.expectationBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  flex-shrink: 0;
+}
+
+.expectationDetailsInner {
+  display: none;
+}
+
+.expectationHeading {
+  color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  font-size: inherit;
+  line-height: 1.3958;
+  margin-bottom: 0.27083em;
+  text-align: center;
+}
+
+.expectationBody {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.3em;
+  line-height: 1.6;
+  text-align: center;
+  color: #05274c;
+}
+
+.expectationBox {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 20px 0px #d0d7e94d;
+  gap: 0.9em;
+  padding: 0.9em 1.05em;
+  border-radius: 10px;
+  outline: 1px solid rgba(5, 39, 76, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.expectationBoxCurrent {
+  outline: 1px solid #3375d9;
+  background-color: #ebf5fe;
+}
+
+.expectationHeader {
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.6;
+  color: #05274c;
+}
+
+.expectationBoxCurrent .expectationHeader {
+  font-weight: 700;
+}
+
+.expectationHeaderBody {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.392857;
+  color: #05274c;
+  margin-bottom: 0.46em;
+}
+
+.expectationBodyText {
+  color: #05274c;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.2em;
+  line-height: 1.6;
+}
+
+.expectationMain {
+  display: flex;
+  gap: 56px;
+}
+
+.expectationDetails {
+  box-shadow: 0px 3.8656537532806396px 44.384918212890625px 0px #d0d7e9cc;
+  flex-grow: 1;
+  padding: 46px 64px 57px;
+  border-radius: 15px;
+}
+
+.expectationImageWrapper {
+  position: unset !important;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.expectationImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@media (max-width: 1250px) {
+  .expectation {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .expectationMain {
+    flex-direction: column;
+  }
+
+  .expectationDetails {
+    display: none;
+  }
+
+  .expectationBoxInner {
+    border-radius: 15px;
+    outline: 1px solid #3375d9;
+  }
+  .expectationDetailsInner {
+    display: flex;
+    flex-direction: column;
+    padding: 43px 20px 30px;
+  }
+
+  .expectation {
+    padding-block: 53px 62px;
+  }
+}
+
+@media (max-width: 650px) {
+  .expectationHeading {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+
+  .expectationBody,
+  .expectationBodyText,
+  .expectationBox {
+    font-size: 18px;
+  }
+
+  .expectationHeading {
+    margin-bottom: 26px;
+  }
+
+  .expectationBody {
+    margin-bottom: 27px;
+  }
+}
