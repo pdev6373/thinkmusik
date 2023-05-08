@@ -1,5 +1,5 @@
 .callToActionOuter {
-  font-size: clamp(36px, 3.3vw, 48px);
+  font-size: clamp(36px, 3.3vw, 40px);
   padding: 1.7916667em 5.55555% 2.45833em;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .callToActionInner {
-  font-size: clamp(36px, 3.3vw, 48px);
+  font-size: clamp(36px, 2.8vw, 40px);
   transform: translate(-8px, -8px);
   padding: 0.4166667em 1.145833333em;
   background-color: #fbf9f6;
@@ -25,7 +25,7 @@
   position: unset !important;
   width: 44.87079%;
   max-width: 573px;
-  min-width: 500px;
+  min-width: 573px;
 }
 
 .laptop {
@@ -38,7 +38,6 @@
 .availabilityHeading {
   color: #05274c;
   font-weight: 700;
-  font-size: 48px;
   font-size: inherit;
   line-height: 1.3958;
   margin-bottom: 0.27083em;
@@ -83,6 +82,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .laptopWrapper {
+    min-width: 500px;
+  }
+}
+
 @media (max-width: 1080px) {
   .callToActionInner {
     padding: 0.4166667em;
@@ -93,7 +98,7 @@
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 950px) {
   .callToActionInner {
     flex-direction: column-reverse;
     transform: translate(0, 0);

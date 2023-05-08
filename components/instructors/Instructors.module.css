@@ -1,0 +1,86 @@
+.generation {
+  font-size: clamp(36px, 3.3vw, 48px);
+  padding: 2em 0 1.770833em;
+}
+
+.generationTextWrapper {
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (max-width: 1250px) {
+  .generationTextWrapper {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+.generationHeading {
+  color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  font-size: inherit;
+  line-height: 1.3958;
+  margin-bottom: 0.27083em;
+  text-align: center;
+}
+
+.generationBody {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.3em;
+  line-height: 1.6;
+  text-align: center;
+  color: #05274c;
+}
+
+.instructors {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-inline: 20px;
+}
+
+.instructorsWrapper {
+  position: unset !important;
+  width: 90%;
+  margin-inline: auto;
+  max-width: 258px;
+  min-width: 258px;
+}
+
+.instructor {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.viewAllInstructorsButton {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #3375d9;
+  border: 1px solid #3375d9;
+  border-radius: 50px;
+  background: #fff;
+  padding: 1.09375em 2.28125em;
+}
+
+.viewAllInstructorsButtonWrapper {
+  font-size: clamp(36px, 3.3vw, 48px);
+  display: flex;
+  justify-content: center;
+  margin-top: 1.539375em;
+}
+
+@media (max-width: 650px) {
+  .generation,
+  .viewAllInstructorsButtonWrapper {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+
+  .generationHeading {
+    margin-bottom: 19px;
+  }
+}

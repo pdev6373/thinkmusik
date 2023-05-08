@@ -12,7 +12,9 @@ import {
   FrequentlyAskedQuestions,
   Header,
   Hero,
+  Instructors,
   MainButton,
+  Plans,
   SecondaryButton,
 } from "@/components";
 import Link from "next/link";
@@ -93,63 +95,6 @@ const courses = [
   "/guitar_scroll.png",
   "/guitar_scroll2.png",
   "/guitar_scroll3.png",
-];
-
-const instructors = [
-  "/image 741 (1).png",
-  "/image 741 (2).png",
-  "/image 741 (3).png",
-  "/image 741 (1).png",
-  "/image 741 (2).png",
-  "/image 741 (3).png",
-];
-
-const allPlans = [
-  {
-    type: "Monthly",
-    access: "All-access to everything per instrument selected",
-    price: "N2,000",
-    items: [
-      "Unlimited access",
-      "Guided learning",
-      "Progress tracking",
-      "New releases every Month",
-      "Interactive TAB",
-      "Multiple HD angles",
-      "Supportive community",
-      "Available for mobile, tablet and desktop",
-    ],
-  },
-  {
-    type: "Quarterly",
-    access: "All-access to everything per instrument selected",
-    price: "N2,000",
-    items: [
-      "Unlimited access",
-      "Guided learning",
-      "Progress tracking",
-      "New releases every Month",
-      "Interactive TAB",
-      "Multiple HD angles",
-      "Supportive community",
-      "Available for mobile, tablet and desktop",
-    ],
-  },
-  {
-    type: "Annually",
-    access: "All-access to everything per instrument selected",
-    price: "N2,000",
-    items: [
-      "Unlimited access",
-      "Guided learning",
-      "Progress tracking",
-      "New releases every Month",
-      "Interactive TAB",
-      "Multiple HD angles",
-      "Supportive community",
-      "Available for mobile, tablet and desktop",
-    ],
-  },
 ];
 
 export default function Welcome() {
@@ -326,97 +271,8 @@ export default function Welcome() {
         ))}
       </div>
 
-      <div className={styles.generation}>
-        <div className={styles.generationTextWrapper}>
-          <h3 className={`${styles.generationHeading} ${myFont.className}`}>
-            Learn from a new <br /> generation of Musicians
-          </h3>
-          <p className={styles.generationBody}>
-            Here are just a few of our incredible instructors.
-          </p>
-        </div>
-
-        <div className={styles.instructors}>
-          {instructors.map((instructor, index) => (
-            <Image
-              key={index}
-              src={instructor}
-              alt="instructor image"
-              width={377}
-              height={590}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.plan}>
-        <div className={styles.planTextWrapper}>
-          <h3 className={`${styles.planHeading} ${myFont.className}`}>
-            Choose a plan that&#39;s <br />
-            right for you
-          </h3>
-          <p className={styles.planBody}>
-            Here are just a few of our incredible instructors.
-          </p>
-        </div>
-
-        <div className={styles.allPlans}>
-          {allPlans.map((plan, index) => (
-            <div
-              key={index}
-              className={`${styles.planButton} ${myFont.className} ${
-                !index ? styles.currentPlanButton : ""
-              }`}
-            >
-              {plan.type}
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.planDetails}>
-          <div className={styles.planDetailsTop}>
-            <div className={styles.planSnippet}>
-              <h3 className={`${styles.planHeading} ${myFont.className}`}>
-                {allPlans[0].type} Plan
-              </h3>
-              <p className={styles.planText}>{allPlans[0].access}</p>
-              <div className={styles.planPriceWrapper}>
-                <span className={`${styles.planPrice} ${myFont.className}`}>
-                  {allPlans[0].price}/
-                </span>
-                <span
-                  className={`${styles.planPriceAccent} ${myFont.className}`}
-                >
-                  mo
-                </span>
-              </div>
-
-              <MainButton onClick={() => {}} text="Start Learning" />
-            </div>
-          </div>
-
-          <div className={styles.planInfo}>
-            <h3 className={`${styles.planInfoHeading} ${myFont.className}`}>
-              {allPlans[0].type} plan includes:
-            </h3>
-
-            <div className={styles.items}>
-              {allPlans[0].items.map((item) => (
-                <div key={item} className={styles.planItem}>
-                  <Image
-                    src="/check-circle.svg"
-                    alt="benefits"
-                    width={24}
-                    height={24}
-                  />
-                  <p className={styles.playList}>{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Instructors />
+      <Plans />
       <Availability />
       <FrequentlyAskedQuestions />
       <Footer />

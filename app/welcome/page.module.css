@@ -8,31 +8,17 @@
   padding: 109px 5.55555%;
 }
 
-.plan {
-  background-color: #111f39;
-}
-
 .offer {
   background-color: #111f39;
   padding: 63px 5.55555% 55px;
 }
 
-.expectation,
-.generation,
-.plan {
+.expectation {
   padding: 95px 5.55555% 258px;
-}
-
-.plan {
-  padding-block: 95px;
 }
 
 .expectationTextWrapper {
   padding-inline: 5.55555%;
-}
-
-.generation {
-  padding-inline: 0;
 }
 
 @media (max-width: 1250px) {
@@ -40,8 +26,7 @@
   .step,
   .offer,
   .expectation,
-  .expectationTextWrapper,
-  .plan {
+  .expectationTextWrapper {
     padding-inline: max(3%, 20px);
   }
 }
@@ -49,9 +34,7 @@
 .howItWorksTextWrapper,
 .stepTextWrapper,
 .offerTextWrapper,
-.planTextWrapper,
-.expectationTextWrapper,
-.generationTextWrapper {
+.expectationTextWrapper {
   max-width: 780px;
   margin-inline: auto;
   text-align: center;
@@ -60,9 +43,7 @@
 .howItWorksHeading,
 .stepHeading,
 .offerHeading,
-.planHeading,
-.expectationHeading,
-.generationHeading {
+.expectationHeading {
   color: #05274c;
   font-weight: 700;
   font-size: 48px;
@@ -70,8 +51,7 @@
   margin-bottom: 25px;
 }
 
-.expectationHeading,
-.generationHeading {
+.expectationHeading {
   margin-bottom: 13px;
 }
 
@@ -86,9 +66,7 @@
 .howItWorksBody,
 .stepBody,
 .offerBody,
-.expectationBody,
-.generationBody,
-.planBody {
+.expectationBody {
   color: #05274c;
   font-weight: 400;
   font-size: 20px;
@@ -108,9 +86,7 @@
 }
 
 .offerHeading,
-.offerBody,
-.planHeading,
-.planBody {
+.offerBody {
   color: #fff;
 }
 
@@ -298,200 +274,12 @@
   padding-block: 39px;
 }
 
-.instructors {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-inline: 20px;
-}
-
-.allPlans {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  display: flex;
-  max-width: 688px;
-  margin-inline: auto;
-  padding: 8px;
-  margin-bottom: 52px;
-}
-
-.planButton {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.166667;
-  color: #fff;
-  padding: 1em 3.509em;
-  flex-basis: 0;
-  flex-grow: 1;
-  border-radius: 100px;
-  text-align: center;
-}
-
-.currentPlanButton {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  background: #ffffff;
-  color: #3375d9;
-}
-
-.planDetails {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 48px;
-  max-width: 907px;
-  margin-inline: auto;
-  gap: 20px;
-}
-
-.planDetails > * {
-  flex-basis: 0;
-  flex-grow: 1;
-}
-
-.planHeading {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.15625;
-  color: #3375d9;
-  margin-bottom: 0.5625em;
-}
-
-.planText {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #27272a;
-  margin-bottom: 24px;
-}
-
-.planPriceWrapper {
-  margin-bottom: 48px;
-}
-
-.planPrice {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.15625;
-
-  color: #27272a;
-}
-
-.planPriceAccent {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.15625;
-
-  color: #27272a;
-}
-
-.planInfo {
-  border: 1px solid #b0caf0;
-  box-shadow: 0px 4px 38px rgba(0, 83, 208, 0.05);
-  border-radius: 16px;
-  padding: 30px 47px;
-}
-
-.planSnippet {
-  max-width: 300px;
-  min-width: 250px;
-}
-
-.planInfoHeading {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.125;
-  margin-bottom: 32px;
-
-  color: #3f3f46;
-}
-
-.items {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.planItem {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.playList {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-
-  color: #27272a;
-}
-
-@media (max-width: 850px) {
-  .planInfo {
-    flex-grow: 1.5;
-  }
-
-  .planDetails {
-    padding: 30px;
-  }
-
-  .planInfo {
-    padding: 30px 20px;
-  }
-}
-
-@media (max-width: 720px) {
-  .planDetails {
-    flex-direction: column;
-  }
-
-  .planSnippet {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .planInfo {
-    width: 100%;
-  }
-
-  .planButton {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 530px) {
-  .planButton {
-    padding: 0.4em;
-  }
-
-  .allPlans {
-    padding: 5px;
-  }
-}
-
-@media (max-width: 975px) {
-  .callToActionInner {
-    flex-direction: column;
-  }
-
-  .laptopWrapper {
-    max-width: 70%;
-    min-width: 70%;
-    margin-inline: auto;
-  }
-}
-
 @media (max-width: 650px) {
   .howItWorksHeading,
   .stepHeading,
   .offerHeading,
-  .planHeading,
   .expectationHeading,
-  .generationHeading,
-  .availabilityHeading {
+  .generationHeading {
     font-size: 36px;
   }
 

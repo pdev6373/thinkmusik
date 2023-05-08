@@ -1,0 +1,315 @@
+.plan {
+  background-color: #111f39;
+  font-size: clamp(36px, 3.3vw, 48px);
+  padding: 2.10416667em 5.55555% 2.85416667em;
+}
+
+@media (max-width: 1250px) {
+  .plan {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+.allPlans {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  display: flex;
+  max-width: 688px;
+  margin-inline: auto;
+  padding: 8px;
+  margin-bottom: 52px;
+  position: relative;
+}
+
+.planButton {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.166667;
+  color: #fff;
+  padding: 1em 3.509em;
+  flex-basis: 0;
+  flex-grow: 1;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.currentPlanButton {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.currentPlanAccent {
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  line-height: 1.166667;
+  color: #3375d9;
+  padding: 1em 3.509em;
+  position: absolute;
+  background: #ffffff;
+  text-align: center;
+  width: 33.3%;
+  top: 8px;
+  bottom: 8px;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.currentPlanAccentRight {
+  transform: translateX(100%);
+}
+
+.currentPlanAccentRight2 {
+  transform: translateX(calc(200% - 16px));
+}
+
+.currentPlanAccentLeft {
+  transform: translateX(100%);
+}
+
+/* .currentPlanAccentLeft2 {
+  transform: translateX(-200%);
+} */
+
+.planDetails {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5em;
+  max-width: 907px;
+  margin-inline: auto;
+  gap: 0.625em;
+  font-size: 32px;
+}
+
+.planBody {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 59px;
+}
+
+.planDetails > * {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.planHeading {
+  color: #fff;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.15625;
+  text-align: center;
+  margin-bottom: 1.020833em;
+}
+
+.planText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #05274c;
+  margin-bottom: 1.2em;
+}
+
+.planPriceWrapper {
+  font-size: 32px;
+  margin-bottom: 1.5em;
+}
+
+.planPrice {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.15625;
+
+  color: #27272a;
+}
+
+.planPriceAccent {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.15625;
+
+  color: #27272a;
+}
+
+.startLearningButton {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  padding: 1.09375em 3.40625em;
+  background: #3375d9;
+  border-radius: 50px;
+}
+
+.planHeadingBottom {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.15625;
+  color: #3375d9;
+  margin-bottom: 0.5625em;
+}
+
+.planInfo {
+  border: 1px solid #b0caf0;
+  box-shadow: 0px 4px 38px rgba(0, 83, 208, 0.05);
+  border-radius: 16px;
+  font-size: 24px;
+  padding: 1.25em 1.958333em;
+}
+
+.planSnippet {
+  max-width: 300px;
+  min-width: 250px;
+}
+
+.planInfoHeading {
+  font-weight: 700;
+  line-height: 1.125;
+  margin-bottom: 32px;
+
+  color: #3f3f46;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.planItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.playList {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: #27272a;
+}
+
+@media (max-width: 950px) {
+  .planDetails {
+    font-size: 24px;
+    gap: 0.3em;
+  }
+  .planInfo {
+    font-size: 20px;
+  }
+
+  .planSnippet {
+    max-width: 250px;
+    min-width: 200px;
+  }
+
+  .planText {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .planDetails {
+    flex-direction: column;
+    gap: 48px;
+    max-width: 100%;
+  }
+
+  .planSnippet {
+    min-width: 0;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .planInfo {
+    width: 100%;
+  }
+
+  .currentPlanButton,
+  .currentPlanAccent {
+    font-size: 18px;
+  }
+
+  .planButton {
+    font-size: 16px;
+    padding: 1em;
+  }
+}
+
+.allPlansMobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .plan {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+}
+
+@media (max-width: 500px) {
+  .plan {
+    padding-block: 50px 48px;
+  }
+  .planDetails {
+    padding-inline: 14px;
+  }
+
+  .allPlansMobile {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 33px;
+  }
+
+  .allPlans {
+    display: none;
+  }
+
+  .planButtonMobile {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.166667;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 76.8387px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    flex-grow: 1;
+    max-width: 200px;
+  }
+
+  .currentPlanButtonMobile {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.15;
+    background: #ffffff;
+    color: #3375d9;
+  }
+
+  .planHeading {
+    margin-bottom: 49px;
+  }
+}
+
+@media (max-width: 350px) {
+  .allPlansMobile {
+    flex-direction: column;
+  }
+
+  .planButtonMobile {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -7,3 +7,5 @@ export { default as Card } from "./card/Card";
 export { default as Footer } from "./footer/Footer";
 export { default as FrequentlyAskedQuestions } from "./frequentlyAskedQuestions/FrequentlyAskedQuestions";
 export { default as Availability } from "./availability/Availability";
+export { default as Plans } from "./plan/Plans";
+export { default as Instructors } from "./instructors/Instructors";
