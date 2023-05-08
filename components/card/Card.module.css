@@ -1,12 +1,12 @@
 .wrapper {
   background-color: #05274c;
   border-radius: 10px;
-  width: 100%;
 }
 
 .wrapperInner {
+  font-size: 20px;
   transform: translate(-4px, -4px);
-  padding: 38px 32px;
+  padding: 1.9em 1.6em;
   background-color: #fff;
   box-shadow: 0px 4px 40px 0px #d0d7e980;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -15,15 +15,21 @@
 
 .header {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: inherit;
+  line-height: 1.125;
   color: #05274c;
-  margin-bottom: 8px;
+  margin-bottom: 0.55em;
 }
 
 .body {
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.4;
   color: #3f3f46;
+}
+
+@media (max-width: 650px) {
+  .wrapperInner {
+    padding: 30px;
+  }
 }

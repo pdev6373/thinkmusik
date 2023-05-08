@@ -43,6 +43,14 @@
   min-width: 450px;
 }
 
+.buttonWrapper {
+  margin-top: 22px;
+}
+
+.buttonWrapperBottom {
+  display: none;
+}
+
 @media (max-width: 950px) {
   .wrapper,
   .wrapperReverse {
@@ -62,6 +70,15 @@
 
   .body {
     margin-bottom: 44px;
+  }
+
+  .buttonWrapper {
+    display: none;
+  }
+
+  .buttonWrapperBottom {
+    display: block;
+    margin-top: 26px;
   }
 }
 

@@ -1,106 +1,12 @@
-.howItWorks {
-  background-color: #ebf5fe;
-  padding: 64px 5.55555% 74px;
-}
-
-.step {
-  background-color: #fbf9f6;
-  padding: 109px 5.55555%;
-}
-
-.howItWorksTextWrapper,
-.stepTextWrapper {
-  max-width: 780px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.howItWorksHeading,
-.stepHeading {
-  color: #05274c;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 1.3958;
-  margin-bottom: 25px;
-}
-
-.howItWorksBody,
-.stepBody {
-  color: #05274c;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 59px;
-}
-
 @media (max-width: 450px) {
   .howItWorksBody,
-  .stepBody,
-  .offerBody,
-  .expectationBody,
-  .generationBody,
   .planBody {
     font-size: 18px;
   }
 }
 
-@media (max-width: 500px) {
-  .offerBody {
-    margin-bottom: 59px;
-  }
-}
-
-.confidenceImageWrapper {
-  position: unset !important;
-  width: 90%;
-  max-width: 940px;
-  margin-inline: auto;
-}
-
-.confidenceImage {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-}
-
-.cardWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  gap: 4.1667vw;
-}
-
-@media (max-width: 380px) {
-  .cardWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 450px) {
-  .allCoursesLink {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .generation {
-    padding-block: 60px;
-  }
-}
-
-@media (max-width: 950px) {
-  .bodyContainerWrapper {
-    gap: 84px;
-  }
-}
-
 @media (max-width: 1250px) {
   .howItWorks,
-  .step,
-  .offer,
-  .expectation,
   .bodyContainerWrapper {
     padding-inline: max(3%, 20px);
   }
@@ -108,14 +14,8 @@
 
 @media (max-width: 650px) {
   .howItWorksHeading,
-  .stepHeading,
-  .offerHeading,
   .generationHeading {
     font-size: 36px;
-  }
-
-  .step {
-    padding-block: 40px;
   }
 }
 
@@ -126,6 +26,12 @@
   background-color: #ebf5fe;
   padding: 1.520833em 5.55555% 2.75em;
   font-size: clamp(36px, 3.3vw, 48px);
+}
+
+@media (max-width: 950px) {
+  .bodyContainerWrapper {
+    gap: 84px;
+  }
 }
 
 @media (max-width: 650px) {

@@ -1,0 +1,59 @@
+.step {
+  font-size: clamp(36px, 3.3vw, 48px);
+  background-color: #fbf9f6;
+  padding: 2.27083em 5.55555%;
+}
+
+.stepHeading {
+  color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  font-size: inherit;
+  line-height: 1.3958;
+  margin-bottom: 0.27083em;
+  text-align: center;
+}
+
+.stepBody {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.3em;
+  line-height: 1.6;
+  text-align: center;
+  color: #05274c;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  gap: 4.1667vw;
+}
+
+@media (max-width: 1250px) {
+  .step {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+@media (max-width: 650px) {
+  .step {
+    font-size: clamp(24px, 5.9vw, 36px);
+    padding: 40px;
+  }
+
+  .stepBody {
+    font-size: 18px;
+  }
+
+  .cardWrapper {
+    gap: 24px;
+  }
+
+  .stepHeading {
+    margin-bottom: 16px;
+  }
+
+  .stepBody {
+    margin-bottom: 28px;
+  }
+}

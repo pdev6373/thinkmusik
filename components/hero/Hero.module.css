@@ -74,8 +74,9 @@
 .bodyContainerWrapper {
   display: flex;
   flex-direction: column;
-  gap: 122px;
-  padding-block: 106px 98px;
+  gap: 4.5208333em;
+  padding: 2.208333em 5.55555% 2.0416667em;
+  font-size: clamp(36px, 3.3vw, 48px);
 }
 
 .mostLoved {
@@ -131,7 +132,8 @@
 @media (max-width: 1250px) {
   .details,
   .heroTop,
-  .heroImagesWrapper {
+  .heroImagesWrapper,
+  .bodyContainerWrapper {
     padding-inline: max(3%, 20px);
   }
 }
@@ -206,6 +208,12 @@
   .headerAccent {
     font-size: 50px;
     margin-top: -20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bodyContainerWrapper {
+    font-size: clamp(24px, 5.9vw, 36px);
   }
 }
 

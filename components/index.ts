@@ -11,3 +11,5 @@ export { default as Plans } from "./plans/Plans";
 export { default as Instructors } from "./instructors/Instructors";
 export { default as Expectation } from "./expectation/Expectation";
 export { default as Courses } from "./courses/Courses";
+export { default as Steps } from "./steps/Steps";
+export { default as HowItWorks } from "./howItWorks/HowItWorks";

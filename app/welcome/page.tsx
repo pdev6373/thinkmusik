@@ -1,40 +1,24 @@
 "use client";
 
-import { CardTypes } from "@/types";
-import { Fragment } from "react";
 import {
   Availability,
   BodyContainer,
-  Card,
   Courses,
   Expectation,
   Footer,
   FrequentlyAskedQuestions,
   Header,
   Hero,
+  HowItWorks,
   Instructors,
   Plans,
+  Steps,
 } from "@/components";
 import Image from "next/image";
 import styles from "./page.module.css";
 import localFont from "next/font/local";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
-
-const cardDetails: CardTypes[] = [
-  {
-    header: "Beginner",
-    body: "ThinkMusik offers you unlimited access to all instrument. This will give you room to explore and see which musical instrument matches your interest",
-  },
-  {
-    header: "Intermediate",
-    body: "ThinkMusik offers you unlimited access to all instrument. This will give you room to explore and see which musical instrument matches your interest",
-  },
-  {
-    header: "Advance",
-    body: "ThinkMusik offers you unlimited access to all instrument. This will give you room to explore and see which musical instrument matches your interest",
-  },
-];
 
 const body = [
   {
@@ -54,47 +38,8 @@ export default function Welcome() {
     <div className={styles.welcome}>
       <Header />
       <Hero />
-      <div className={styles.howItWorks}>
-        <div className={styles.howItWorksTextWrapper}>
-          <h3 className={`${styles.howItWorksHeading} ${myFont.className}`}>
-            Build confidence in playing music with ThinkMusik
-          </h3>
-          <p className={styles.howItWorksBody}>
-            Perfect Your Musical Skills Anytime, Anywhere with Expert Guidance
-            and Interactive Lessons and Become a Skilled Musician
-          </p>
-        </div>
-
-        <div className={styles.confidenceImageWrapper}>
-          <Image
-            src="/confidence.png"
-            alt="confidence image"
-            fill
-            className={styles.confidenceImage}
-          />
-        </div>
-      </div>
-
-      <div className={styles.step}>
-        <div className={styles.stepTextWrapper}>
-          <h3 className={`${styles.stepHeading} ${myFont.className}`}>
-            Step-by-step learning
-          </h3>
-          <p className={styles.stepBody}>
-            Whether you&#39;re just starting out or you already have some skills
-            - we&#39;ve got the right learning pathway for you.
-          </p>
-        </div>
-
-        <div className={styles.cardWrapper}>
-          {cardDetails.map((details, index) => (
-            <Fragment key={index}>
-              <Card header={details.header} body={details.body} />
-            </Fragment>
-          ))}
-        </div>
-      </div>
-
+      <HowItWorks />
+      <Steps />
       <Courses />
       <Expectation />
       <div className={styles.bodyContainerWrapper}>

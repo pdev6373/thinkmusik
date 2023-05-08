@@ -25,10 +25,12 @@ export default function BodyContainer({
         <h3 className={`${styles.header} ${myFont.className}`}>{header}</h3>
         <p className={styles.body}>{body}</p>
         {hasButton && (
-          <SecondaryButton
-            text="Start Learning"
-            onClick={handleStartLearning}
-          />
+          <div className={styles.buttonWrapper}>
+            <SecondaryButton
+              text="Start Learning"
+              onClick={handleStartLearning}
+            />
+          </div>
         )}
       </div>
 
@@ -40,6 +42,15 @@ export default function BodyContainer({
           className={styles.image}
         />
       </div>
+
+      {hasButton && (
+        <div className={styles.buttonWrapperBottom}>
+          <SecondaryButton
+            text="Start Learning"
+            onClick={handleStartLearning}
+          />
+        </div>
+      )}
     </div>
   );
 }
