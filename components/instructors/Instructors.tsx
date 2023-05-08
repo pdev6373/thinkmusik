@@ -27,9 +27,8 @@ export default function Instructors() {
 
       <div className={styles.instructors}>
         {instructors.map((instructor, index) => (
-          <div className={styles.instructorsWrapper}>
+          <div className={styles.instructorsWrapper} key={index}>
             <Image
-              key={index}
               src={instructor}
               alt="instructor image"
               fill
