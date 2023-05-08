@@ -499,9 +499,3 @@
     padding-block: 40px;
   }
 }
-
-@media (max-width: 480px) {
-  .platforms {
-    flex-direction: column;
-  }
-}

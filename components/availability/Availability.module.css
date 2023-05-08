@@ -67,3 +67,10 @@
   align-items: center;
   gap: 18px;
 }
+
+/*  */
+@media (max-width: 480px) {
+  .platforms {
+    flex-direction: column;
+  }
+}
