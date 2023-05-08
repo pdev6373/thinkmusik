@@ -2,12 +2,11 @@
 
 import { CardTypes } from "@/types";
 import { Fragment } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
 import {
   Availability,
   BodyContainer,
   Card,
+  Courses,
   Expectation,
   Footer,
   FrequentlyAskedQuestions,
@@ -16,13 +15,9 @@ import {
   Instructors,
   Plans,
 } from "@/components";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import localFont from "next/font/local";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
@@ -52,15 +47,6 @@ const body = [
     body: "Yousician makes learning to play an instrument fun and easy, no matter your skill level. Follow lesson plans created by real music teachers, learn fast with interactive tutorials, and stay motivated with goals and progress tracking. Our award-winning technology listens to you play and gives instant feedback on your accuracy and timing. You always know when you're hitting the right notes.",
     image: "/connection2.png",
   },
-];
-
-const courses = [
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
 ];
 
 export default function Welcome() {
@@ -109,60 +95,7 @@ export default function Welcome() {
         </div>
       </div>
 
-      <div className={styles.offer}>
-        <div className={styles.offerTextWrapper}>
-          <div className={styles.offerHeadingWrapper}>
-            <h3 className={`${styles.offerHeading} ${myFont.className}`}>
-              One membership.
-            </h3>
-            <h3
-              className={`${styles.offerHeading} ${styles.offerHeading2} ${myFont.className}`}
-            >
-              Access to every course.
-            </h3>
-          </div>
-
-          <p className={styles.offerBody}>
-            Explore in-depth courses designed by experts
-          </p>
-        </div>
-
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-        >
-          {courses.map((course, index) => (
-            <SwiperSlide key={index}>
-              <div className={styles.coursesWrapper}>
-                <Image
-                  src={course}
-                  alt="course image"
-                  fill
-                  className={styles.coursesWrapperImage}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        <div className={styles.allCoursesLinkWrapper}>
-          <Link href="/all-courses" className={styles.allCoursesLink}>
-            View all Courses
-          </Link>
-        </div>
-      </div>
-
+      <Courses />
       <Expectation />
       <div className={styles.bodyContainerWrapper}>
         {body.map((item, index) => (
@@ -176,7 +109,6 @@ export default function Welcome() {
           />
         ))}
       </div>
-
       <Instructors />
       <Plans />
       <Availability />

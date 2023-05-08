@@ -8,22 +8,15 @@
   padding: 109px 5.55555%;
 }
 
-.offer {
-  background-color: #111f39;
-  padding: 63px 5.55555% 55px;
-}
-
 .howItWorksTextWrapper,
-.stepTextWrapper,
-.offerTextWrapper {
+.stepTextWrapper {
   max-width: 780px;
   margin-inline: auto;
   text-align: center;
 }
 
 .howItWorksHeading,
-.stepHeading,
-.offerHeading {
+.stepHeading {
   color: #05274c;
   font-weight: 700;
   font-size: 48px;
@@ -31,17 +24,8 @@
   margin-bottom: 25px;
 }
 
-.offerHeading {
-  margin-bottom: 0;
-}
-
-.offerHeadingWrapper {
-  margin-bottom: 20px;
-}
-
 .howItWorksBody,
-.stepBody,
-.offerBody {
+.stepBody {
   color: #05274c;
   font-weight: 400;
   font-size: 20px;
@@ -58,15 +42,6 @@
   .planBody {
     font-size: 18px;
   }
-}
-
-.offerHeading,
-.offerBody {
-  color: #fff;
-}
-
-.offerBody {
-  margin-bottom: 0;
 }
 
 @media (max-width: 500px) {
@@ -103,40 +78,6 @@
   }
 }
 
-.coursesWrapperImage {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-}
-
-.coursesWrapper {
-  position: unset !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  max-width: 377px;
-}
-
-.allCoursesLinkWrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.allCoursesLink {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 17.5px 46px;
-  border: 1px solid #3375d9;
-  border-radius: 50px;
-  color: #fff;
-  background-color: transparent;
-  margin-top: 50px;
-  text-align: center;
-}
-
 @media (max-width: 450px) {
   .allCoursesLink {
     margin-top: 20px;
@@ -144,45 +85,8 @@
 }
 
 @media (max-width: 1000px) {
-  .expectationDetails {
-    padding: 30px;
-  }
-
-  .expectationBox {
-    padding: 10px 20px;
-  }
-
-  .expectationMain {
-    gap: 30px;
-  }
-
-  .expectation,
   .generation {
     padding-block: 60px;
-  }
-}
-
-.bodyContainerWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 4.4375em;
-  background-color: #ebf5fe;
-  padding: 1.520833em 5.55555% 2.75em;
-  font-size: clamp(36px, 3.3vw, 48px);
-}
-
-@media (max-width: 900px) {
-  .expectationMain {
-    flex-direction: column;
-  }
-
-  .expectationBoxWrapper {
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  .expectationBoxWrapper > * {
-    flex-shrink: 0;
   }
 }
 
@@ -197,7 +101,6 @@
   .step,
   .offer,
   .expectation,
-  .expectationTextWrapper,
   .bodyContainerWrapper {
     padding-inline: max(3%, 20px);
   }
@@ -207,7 +110,6 @@
   .howItWorksHeading,
   .stepHeading,
   .offerHeading,
-  .expectationHeading,
   .generationHeading {
     font-size: 36px;
   }
@@ -215,6 +117,15 @@
   .step {
     padding-block: 40px;
   }
+}
+
+.bodyContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.4375em;
+  background-color: #ebf5fe;
+  padding: 1.520833em 5.55555% 2.75em;
+  font-size: clamp(36px, 3.3vw, 48px);
 }
 
 @media (max-width: 650px) {

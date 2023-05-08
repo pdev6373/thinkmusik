@@ -10,3 +10,4 @@ export { default as Availability } from "./availability/Availability";
 export { default as Plans } from "./plans/Plans";
 export { default as Instructors } from "./instructors/Instructors";
 export { default as Expectation } from "./expectation/Expectation";
+export { default as Courses } from "./courses/Courses";

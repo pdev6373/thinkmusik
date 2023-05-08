@@ -1,0 +1,124 @@
+.offer {
+  background-color: #111f39;
+  padding: 1.3125em 0 1.1458333em;
+  font-size: clamp(36px, 3.3vw, 48px);
+}
+
+.offerHeading,
+.offerHeading2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.3958;
+  text-align: center;
+}
+
+.offerHeading2 {
+  margin-bottom: 0.41666em;
+}
+
+.offerBody {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.3em;
+  line-height: 1.6;
+  text-align: center;
+  color: #fff;
+}
+
+.allCoursesLinkWrapper {
+  display: flex;
+  justify-content: center;
+  font-size: clamp(36px, 3.3vw, 48px);
+  margin-top: 1em;
+}
+
+.allCoursesLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 1.09375em 2.875em;
+  border: 1px solid #3375d9;
+  border-radius: 50px;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+}
+
+.swiperSlideLeft {
+  margin-left: 5.55555%;
+}
+
+.swiperSlideRight {
+  margin-right: 5.55555%;
+}
+
+.offerTextWrapper,
+.allCoursesLinkWrapper {
+  padding-inline: 5.55555%;
+}
+
+.coursesImageWrapper {
+  position: unset !important;
+  max-width: 381px;
+  margin-inline: auto;
+}
+
+.coursesImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@media (max-width: 1250px) {
+  .swiperSlideLeft {
+    margin-left: max(3%, 20px);
+  }
+
+  .swiperSlideRight {
+    margin-right: max(3%, 20px);
+  }
+
+  .offerTextWrapper,
+  .allCoursesLinkWrapper {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+@media (max-width: 650px) {
+  .offer,
+  .allCoursesLinkWrapper {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+
+  .offerHeading2 {
+    margin-bottom: 18px;
+  }
+
+  .offerBody {
+    font-size: 18px;
+    margin-bottom: 43px;
+  }
+
+  .offer {
+    padding-block: 51px 103px;
+  }
+}
+
+@media (max-width: 450px) {
+  .coursesImageWrapper {
+    max-width: 262px;
+  }
+}
+
+@media (max-width: 300px) {
+  .coursesImageWrapper {
+    max-width: 200px;
+  }
+
+  .allCoursesLink {
+    padding: 1.2em;
+    width: 100%;
+  }
+}
