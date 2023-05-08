@@ -99,7 +99,7 @@
     transform: translate(0, 0);
     background: #fff;
     border: none;
-    gap: 1em;
+    gap: 1.125em;
     padding: 0;
   }
 
@@ -120,8 +120,13 @@
     font-size: clamp(24px, 5.9vw, 36px);
   }
 
-  .questionsBody {
+  .availabilityText {
     font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  .availabilityHeading {
+    margin-bottom: 25px;
   }
 }
 
