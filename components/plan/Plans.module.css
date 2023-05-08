@@ -203,6 +203,7 @@
     font-size: 24px;
     gap: 0.3em;
   }
+
   .planInfo {
     font-size: 20px;
   }
@@ -259,6 +260,7 @@
   .plan {
     padding-block: 50px 48px;
   }
+
   .planDetails {
     padding-inline: 14px;
   }
@@ -300,6 +302,10 @@
 
   .planHeading {
     margin-bottom: 49px;
+  }
+
+  .planInfo {
+    padding: 1em;
   }
 }
 
