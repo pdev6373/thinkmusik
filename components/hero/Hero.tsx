@@ -67,6 +67,10 @@ export default function Hero() {
         </p>
       </div>
 
+      <div className={styles.heroButtonTop}>
+        <MainButton onClick={() => {}} text="Get Started" type="large" />
+      </div>
+
       <div className={styles.heroImagesWrapper}>
         {heroImages.map((image, index) => (
           <div className={styles.heroImageWrapper} key={index}>
@@ -95,14 +99,14 @@ export default function Hero() {
             Most loved music <br />
             learning platform
           </p>
-          <Image
-            src="most_loved.svg"
-            alt="most loved image"
-            // width={64}
-            // height={64}
-            width={48}
-            height={48}
-          />
+          <div className={styles.mostLovedImageWrapper}>
+            <Image
+              src="most_loved.svg"
+              alt="most loved image"
+              fill
+              className={styles.mostLovedImage}
+            />
+          </div>
         </div>
 
         <div className={styles.detailsWrapper}>
