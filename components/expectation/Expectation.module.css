@@ -68,14 +68,6 @@
   font-weight: 700;
 }
 
-.expectationHeaderBody {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.392857;
-  color: #05274c;
-  margin-bottom: 0.46em;
-}
-
 .expectationBodyText {
   color: #05274c;
   font-weight: 400;
@@ -92,8 +84,17 @@
 .expectationDetails {
   box-shadow: 0px 3.8656537532806396px 44.384918212890625px 0px #d0d7e9cc;
   flex-grow: 1;
-  padding: 46px 64px 57px;
+  padding: 1.642857em 64px 2.0357em;
   border-radius: 15px;
+  font-size: 28px;
+}
+
+.expectationHeaderBody {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.392857;
+  color: #05274c;
+  margin-bottom: 0.46em;
 }
 
 .expectationImageWrapper {
@@ -129,10 +130,12 @@
     border-radius: 15px;
     outline: 1px solid #3375d9;
   }
+
   .expectationDetailsInner {
     display: flex;
     flex-direction: column;
     padding: 43px 20px 30px;
+    font-size: 28px;
   }
 
   .expectation {
@@ -143,6 +146,7 @@
 @media (max-width: 650px) {
   .expectationHeading {
     font-size: clamp(24px, 5.9vw, 36px);
+    margin-bottom: 26px;
   }
 
   .expectationBody,
@@ -151,11 +155,11 @@
     font-size: 18px;
   }
 
-  .expectationHeading {
-    margin-bottom: 26px;
-  }
-
   .expectationBody {
     margin-bottom: 27px;
+  }
+
+  .expectationDetailsInner {
+    font-size: 20px;
   }
 }
