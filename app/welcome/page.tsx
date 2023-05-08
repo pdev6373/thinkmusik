@@ -1,33 +1,27 @@
 "use client";
 
-import React, { Fragment, useRef, useState } from "react";
-// Import Swiper React components
+import { CardTypes } from "@/types";
+import { Fragment, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-// import "./styles.css";
-
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-
 import {
+  Availability,
   BodyContainer,
   Card,
+  Footer,
+  FrequentlyAskedQuestions,
   Header,
   Hero,
   MainButton,
   SecondaryButton,
 } from "@/components";
-import styles from "./page.module.css";
-
-import localFont from "next/font/local";
-import Image from "next/image";
-import { CardTypes } from "@/types";
 import Link from "next/link";
+import Image from "next/image";
+import styles from "./page.module.css";
+import localFont from "next/font/local";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
@@ -158,33 +152,6 @@ const allPlans = [
   },
 ];
 
-const allQuestions = [
-  "Is Thinkmusik right for me?",
-  "What makes Pickup Music better than other guitar lesson sites?",
-  "What's included in my Pickup Music membership?",
-  "How long are the lessons? How long will it take me to complete them?",
-  "I'm brand new to guitar. Is Pickup Music the right choice for me?",
-];
-
-const footerItems = [
-  {
-    title: "Instrument",
-    content: ["Piano", "Guitar", "Bass"],
-  },
-  {
-    title: "Level",
-    content: ["Beginner", "Intermediate", "Advanced"],
-  },
-  {
-    title: "Music Tools",
-    content: ["Tuner", "Metonome", "Tempo changer", "Easy score"],
-  },
-  {
-    title: "Resources",
-    content: ["About Us", "FAQs", "Blogs", "Contact Us"],
-  },
-];
-
 export default function Welcome() {
   const [currentExpectation, setCurrentExpectation] = useState(expectations[0]);
 
@@ -219,8 +186,8 @@ export default function Welcome() {
             Step-by-step learning
           </h3>
           <p className={styles.stepBody}>
-            Whether you&#39;re just starting out or you already have some skills
-            – we&#39;ve got the right learning pathway for you.
+            Whether you're just starting out or you already have some skills –
+            we've got the right learning pathway for you.
           </p>
         </div>
 
@@ -293,8 +260,8 @@ export default function Welcome() {
             What to expect from each lesson
           </h3>
           <p className={styles.expectationBody}>
-            Pickup Music&#39;s learning features are designed to give you a
-            guided, structured approach so you can make lasting progress.
+            Pickup Music's learning features are designed to give you a guided,
+            structured approach so you can make lasting progress.
           </p>
         </div>
 
@@ -385,7 +352,7 @@ export default function Welcome() {
       <div className={styles.plan}>
         <div className={styles.planTextWrapper}>
           <h3 className={`${styles.planHeading} ${myFont.className}`}>
-            Choose a plan that&#39;s <br />
+            Choose a plan that's <br />
             right for you
           </h3>
           <p className={styles.planBody}>
@@ -450,152 +417,9 @@ export default function Welcome() {
         </div>
       </div>
 
-      <div className={styles.callToActionOuter}>
-        <div className={styles.callToAction}>
-          <div className={styles.callToActionInner}>
-            <div className={styles.laptopWrapper}>
-              <Image
-                src="/laptop.png"
-                alt="laptop"
-                fill
-                className={styles.laptop}
-              />
-            </div>
-
-            <div className={styles.availability}>
-              <h3
-                className={`${styles.availabilityHeading} ${myFont.className}`}
-              >
-                Available for all devices: <br />
-                Web, Mobile, Tablet
-              </h3>
-              <p className={styles.availabilityText}>
-                For Mobile and Tablet you can download via playstore or Appstore
-                below
-              </p>
-              <div className={styles.platforms}>
-                <Image src="/google.svg" alt="google" width={176} height={54} />
-                <Image src="/apple.svg" alt="google" width={166} height={54} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.questions}>
-        <div className={styles.questionsInner}>
-          <div className={styles.questionsTextWrapper}>
-            <h3 className={`${styles.questionsHeading} ${myFont.className}`}>
-              Frequently Asked Questions
-            </h3>
-            <p className={styles.questionsBody}>
-              If your questions aren&#39;t answered below, please chat with us.
-            </p>
-          </div>
-
-          <div className={styles.actions}>
-            <MainButton
-              onClick={() => {}}
-              text="Getting Started"
-              type="large"
-            />
-            <SecondaryButton
-              onClick={() => {}}
-              text="Pricing & plans"
-              isBlack={true}
-            />
-            <SecondaryButton onClick={() => {}} text="Billing" isBlack={true} />
-          </div>
-
-          <div className={styles.questionWrapper}>
-            {allQuestions.map((question) => (
-              <div className={styles.question} key={question}>
-                <p className={styles.questionText}>{question}</p>
-                <Image
-                  src="/Right 24px.svg"
-                  alt="dropdown"
-                  width={24}
-                  height={24}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerNav}>
-          <div className={styles.footerNavTop}>
-            {/* <Image src="/logo_light.svg" alt="logo" width={202} height={51} /> */}
-            <Image src="/logo.svg" alt="logo" width={158} height={52} />
-            <p className={styles.footerNavTopText}>
-              The fastest and fun way to learn and get better at playing any
-              instrument
-            </p>
-
-            <div className={styles.footerCtaIcons}>
-              <Image src="/Group 145.png" alt="image" width={155} height={46} />
-              <Image src="/Group 146.png" alt="image" width={155} height={46} />
-            </div>
-          </div>
-
-          <div className={styles.footerNavWrapper}>
-            {footerItems.map((item) => {
-              return (
-                <div key={item.title}>
-                  <h3 className={`${styles.footerTitle} ${myFont.className}`}>
-                    {item.title}
-                  </h3>
-
-                  <div className={styles.footerItemWrapper}>
-                    {item.content.map((item) => (
-                      <p className={styles.footerItem} key={item}>
-                        {item}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className={styles.terms}>
-          <div className={styles.privacyWrapper}>
-            <p className={styles.termsText}>Privacy</p>
-            <p className={styles.termsText}>Terms</p>
-          </div>
-
-          <div className={styles.footerIconsWrapper}>
-            <Image
-              src="/social_icon4.svg"
-              alt="social icon"
-              width={24}
-              height={24}
-            />
-            <Image
-              src="/social_icon3.svg"
-              alt="social icon"
-              width={24}
-              height={24}
-            />
-            <Image
-              src="/social_icon2.svg"
-              alt="social icon"
-              width={24}
-              height={24}
-            />
-            <Image
-              src="/social_icon1.svg"
-              alt="social icon"
-              width={24}
-              height={24}
-            />
-          </div>
-        </div>
-
-        <p className={styles.copyright}>© 2023 ThinkMusic Inc.</p>
-      </footer>
+      <Availability />
+      <FrequentlyAskedQuestions />
+      <Footer />
     </div>
   );
 }

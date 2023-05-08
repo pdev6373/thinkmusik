@@ -1,0 +1,69 @@
+.callToActionOuter {
+  padding: 86px 5.55555% 118px;
+}
+
+@media (max-width: 1250px) {
+  .callToActionOuter {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+.callToAction {
+  background-color: #05274c;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.callToActionInner {
+  transform: translate(-8px, -8px);
+  padding: 38px 32px;
+  background-color: #fbf9f6;
+  border: 1px solid #05274c;
+  border-radius: 30px;
+  display: flex;
+}
+
+.laptopWrapper {
+  position: unset !important;
+  width: 40%;
+  max-width: 573px;
+}
+
+.laptop {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.availabilityHeading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #05274c;
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.availabilityText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  color: #05274c;
+  max-width: 410px;
+  margin-bottom: 28px;
+}
+
+.platforms {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}

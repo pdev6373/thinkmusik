@@ -4,3 +4,6 @@ export { default as SecondaryButton } from "./secondaryButton/SecondaryButton";
 export { default as Hero } from "./hero/Hero";
 export { default as BodyContainer } from "./bodyContainer/BodyContainer";
 export { default as Card } from "./card/Card";
+export { default as Footer } from "./footer/Footer";
+export { default as FrequentlyAskedQuestions } from "./frequentlyAskedQuestions/FrequentlyAskedQuestions";
+export { default as Availability } from "./availability/Availability";

@@ -1,0 +1,135 @@
+.questions {
+  font-size: clamp(36px, 3.3vw, 48px);
+  background-color: #ebf5fe;
+  padding: 1.64583em 5.55555% 2.02083em;
+}
+
+.questionsHeading {
+  color: #05274c;
+  font-weight: 700;
+  font-size: 48px;
+  font-size: inherit;
+  line-height: 1.3958;
+  margin-bottom: 0.27083em;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  font-size: 16px;
+  margin-bottom: 4.25em;
+}
+
+.button,
+.buttonCurrent {
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.125;
+  color: #3f3f46;
+  background: #ffffff;
+  outline: 1px solid rgba(5, 39, 76, 0.4);
+  border-radius: 100px;
+  padding: 1.125em 3.0625em;
+  min-width: 212px;
+  text-align: center;
+}
+
+.buttonCurrent {
+  background: #3375d9;
+  color: #ffffff;
+  outline: none;
+}
+
+.questionsInner {
+  max-width: 804px;
+  margin-inline: auto;
+}
+
+/* @media (max-width: 810px) {
+  .actions > * {
+    min-width: 240px;
+  }
+} */
+
+.questionsBody {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2.3em;
+  line-height: 1.6;
+  text-align: center;
+  color: #05274c;
+}
+
+.questionWrapper {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.question {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  background: #fff;
+  padding: 1.5em 3.125em;
+  box-shadow: 0px 3.86565px 20px rgba(208, 215, 233, 0.5);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.questionText {
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.5;
+  color: #05274c;
+}
+
+@media (max-width: 1250px) {
+  .questions {
+    padding-inline: max(3%, 20px);
+  }
+}
+
+@media (max-width: 650px) {
+  .questions {
+    font-size: clamp(24px, 5.9vw, 36px);
+  }
+
+  .questionsBody {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .actions {
+    gap: 14px;
+    font-size: 12.8px;
+  }
+
+  .question {
+    font-size: 12.8px;
+    padding: 1.5em 2em;
+  }
+
+  .button,
+  .buttonCurrent {
+    max-width: 165px;
+    min-width: 165px;
+    padding: 14.4px 36px;
+  }
+}
+
+@media (max-width: 390px) {
+  .button,
+  .buttonCurrent {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
