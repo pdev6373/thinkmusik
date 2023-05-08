@@ -45,19 +45,21 @@ button {
 
 .swiper-slide {
   min-height: 670px;
-  max-width: 381px;
+  /* max-width: 381px; */
+  max-width: 411px;
 }
 
 @media (max-width: 450px) {
   .swiper-slide {
-    max-width: 262px;
+    max-width: 286px;
+    /* max-width: 262px; */
     min-height: 465px;
   }
 }
 
 @media (max-width: 300px) {
   .swiper-slide {
-    max-width: 200px;
+    max-width: 220px;
     min-height: 375px;
   }
 }

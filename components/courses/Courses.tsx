@@ -44,20 +44,11 @@ export default function Courses() {
         mousewheel={true}
         keyboard={true}
         slidesPerView="auto"
-        spaceBetween={30}
+        spaceBetween={0}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       >
         {courses.map((course, index) => (
-          <SwiperSlide
-            key={index}
-            className={
-              !index
-                ? styles.swiperSlideLeft
-                : courses.length === index + 1
-                ? styles.swiperSlideRight
-                : ""
-            }
-          >
+          <SwiperSlide key={index}>
             <div className={styles.coursesImageWrapper}>
               <Image
                 src={course}

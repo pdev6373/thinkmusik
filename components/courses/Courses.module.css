@@ -45,14 +45,6 @@
   text-align: center;
 }
 
-.swiperSlideLeft {
-  margin-left: 5.55555%;
-}
-
-.swiperSlideRight {
-  margin-right: 3%;
-}
-
 .offerTextWrapper,
 .allCoursesLinkWrapper {
   padding-inline: 5.55555%;
@@ -72,14 +64,6 @@
 }
 
 @media (max-width: 1250px) {
-  .swiperSlideLeft {
-    margin-left: max(3%, 20px);
-  }
-
-  .swiperSlideRight {
-    margin-right: max(3%, 20px);
-  }
-
   .offerTextWrapper,
   .allCoursesLinkWrapper {
     padding-inline: max(3%, 20px);
