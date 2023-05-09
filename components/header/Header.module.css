@@ -113,7 +113,7 @@
   .navList {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 17.9px;
   }
 
   .navLink {
@@ -145,7 +145,7 @@
   }
 
   .navItem {
-    padding: 17.9px;
+    padding-bottom: 17.9px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
