@@ -120,6 +120,7 @@
     color: #05274c;
     font-size: 22px;
     justify-content: space-between;
+    gap: 20px;
     padding: 8px;
   }
 
@@ -176,14 +177,6 @@
 }
 
 @media (max-width: 400px) {
-  .navWrapper {
-    width: 83%;
-  }
-
-  .navLink {
-    font-size: 16px;
-  }
-
   /* .actions {
     flex-direction: column;
     width: 100%;
@@ -200,7 +193,4 @@
 }
 
 @media (max-width: 355px) {
-  .navWrapper {
-    padding: 20px;
-  }
 }
