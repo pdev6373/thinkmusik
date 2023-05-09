@@ -15,6 +15,19 @@
   }
 }
 
+.navHeader {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16.5px;
+  position: sticky;
+  top: 0;
+  z-index: 20000;
+  background: #fff;
+  padding: 18.5px max(3%, 20px);
+}
+
 .logoWrapper {
   position: relative;
   width: 158px;
@@ -63,26 +76,38 @@
 }
 
 @media (max-width: 1150px) {
+  .navHeader {
+    display: flex;
+  }
+
   .navWrapper {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 100%;
-    width: 70%;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    padding: 40px;
-    z-index: 10000;
+    z-index: 1000;
+    overflow-y: scroll;
+    transition: transform 0.4s;
+    background: #fff;
+    z-index: 20;
+  }
+
+  .navWrapper > .actions {
+    display: none;
   }
 
   .navWrapperOpen {
     transform: translateX(100%);
-    background-color: #111f39;
+    background-color: #fff;
   }
 
   .menuWrapper {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .navList {
@@ -92,26 +117,61 @@
   }
 
   .navLink {
-    color: #fff;
+    color: #05274c;
     font-size: 22px;
+    justify-content: space-between;
+    padding: 8px;
   }
 
   .nav {
-    margin-left: 0;
+    margin-inline: 0;
+    margin-bottom: 40px;
+    padding: 18.5px max(3%, 20px);
+    width: 100%;
   }
 
   .actions {
+    padding: 18.5px max(3%, 20px);
+  }
+
+  .navList {
+    width: 100%;
+  }
+
+  .navLink,
+  .navItem {
+    width: 100%;
+  }
+
+  .navItem {
+    padding: 17.9px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (max-width: 550px) {
+  .menuWrapper > .actions {
+    display: none;
+  }
+
+  .navWrapper > .actions {
+    display: flex;
     flex-direction: column;
+    margin-block: auto 24.5px;
     width: 100%;
-    max-width: 400px;
+    gap: 20px;
   }
 
-  .actions > * {
+  .navWrapper > .actions > * {
     width: 100%;
   }
 
-  .login {
+  .navWrapper .login {
+    padding: 17.5px;
     text-align: center;
+    outline: 1px solid #3375d9;
+    border-radius: 50px;
+    font-size: 16px;
   }
 }
 
@@ -123,6 +183,20 @@
   .navLink {
     font-size: 16px;
   }
+
+  /* .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  } */
+
+  /* .actions > * {
+    width: 100%;
+  }
+
+  .login {
+    text-align: center;
+  } */
 }
 
 @media (max-width: 355px) {

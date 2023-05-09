@@ -6,14 +6,17 @@ import { MainButton } from "../";
 import { navs } from "@/constant";
 import { NavTypes } from "./../../types";
 import styles from "./Header.module.css";
-import { useState } from "react";
 
-export default function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+interface HeaderType {
+  isNavOpen: boolean;
+  setIsNavOpen: any;
+}
 
+export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
   const handleSignup = () => {};
   const hanldeLogin = () => {};
-  const handleNavOpen = () => setIsNavOpen((prev) => !prev);
+  const handleNavOpen = () => setIsNavOpen(true);
+  const handleNavClose = () => setIsNavOpen(false);
 
   return (
     <header className={styles.header}>
@@ -28,15 +31,29 @@ export default function Header() {
             : styles.navWrapper
         }
       >
+        <div className={styles.navHeader}>
+          <div className={styles.logoWrapper}>
+            <Image src="logo.svg" alt="logo" fill />
+          </div>
+
+          <Image
+            src="cancel.svg"
+            alt="cancel"
+            width={24}
+            height={24}
+            onClick={handleNavClose}
+          />
+        </div>
+
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             {navs.map((nav: NavTypes) => (
-              <li key={nav.name}>
+              <li key={nav.name} className={styles.navItem}>
                 <Link href={nav.route} className={styles.navLink}>
                   <p>{nav.name}</p>
                   {isNavOpen ? (
                     <Image
-                      src="dropdown_light.svg"
+                      src="dropdown_large.svg"
                       alt="dropdown"
                       width="24"
                       height="24"
@@ -59,12 +76,25 @@ export default function Header() {
           <Link href="/login" className={styles.login}>
             Login
           </Link>
-          <MainButton onClick={handleSignup} text="Sign up" />
+          <MainButton onClick={handleSignup} text="Sign up" type="large" />
         </div>
       </div>
 
-      <div className={styles.menuWrapper} onClick={handleNavOpen}>
-        <Image src="/menu.svg" alt="menu" width="32" height="32" />
+      <div className={styles.menuWrapper}>
+        <div className={styles.actions}>
+          <Link href="/login" className={styles.login}>
+            Login
+          </Link>
+          <MainButton onClick={handleSignup} text="Sign up" />
+        </div>
+
+        <Image
+          src="/menu.svg"
+          alt="menu"
+          width="32"
+          height="32"
+          onClick={handleNavOpen}
+        />
       </div>
     </header>
   );

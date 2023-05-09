@@ -14,11 +14,8 @@ import {
   Plans,
   Steps,
 } from "@/components";
-import Image from "next/image";
 import styles from "./page.module.css";
-import localFont from "next/font/local";
-
-const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
+import { useState } from "react";
 
 const body = [
   {
@@ -34,31 +31,40 @@ const body = [
 ];
 
 export default function Welcome() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <div className={styles.welcome}>
-      <Header />
-      <Hero />
-      <HowItWorks />
-      <Steps />
-      <Courses />
-      <Expectation />
-      <div className={styles.bodyContainerWrapper}>
-        {body.map((item, index) => (
-          <BodyContainer
-            key={index}
-            body={item.body}
-            header={item.header}
-            image={item.image}
-            shouldReverse={!!(index % 2)}
-            hasButton={false}
-          />
-        ))}
-      </div>
-      <Instructors />
-      <Plans />
-      <Availability />
-      <FrequentlyAskedQuestions />
-      <Footer />
+      <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+
+      {!isNavOpen ? (
+        <>
+          <Hero />
+          <HowItWorks />
+          <Steps />
+          <Courses />
+          <Expectation />
+          <div className={styles.bodyContainerWrapper}>
+            {body.map((item, index) => (
+              <BodyContainer
+                key={index}
+                body={item.body}
+                header={item.header}
+                image={item.image}
+                shouldReverse={!!(index % 2)}
+                hasButton={false}
+              />
+            ))}
+          </div>
+          <Instructors />
+          <Plans />
+          <Availability />
+          <FrequentlyAskedQuestions />
+          <Footer />
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
