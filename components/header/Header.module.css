@@ -75,7 +75,7 @@
   line-height: 1.2777778;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1170px) {
   .navHeader {
     display: flex;
   }
