@@ -127,8 +127,10 @@ export default function FrequentlyAskedQuestions() {
               </label>
 
               <div className={styles.answers}>
-                {question.answers.map((answer) => (
-                  <p className={styles.answer}>{answer}</p>
+                {question.answers.map((answer, index) => (
+                  <p className={styles.answer} key={index}>
+                    {answer}
+                  </p>
                 ))}
               </div>
             </div>
