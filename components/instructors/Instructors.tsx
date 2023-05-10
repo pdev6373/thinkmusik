@@ -17,10 +17,18 @@ export default function Instructors() {
   return (
     <section className={styles.generation}>
       <div className={styles.generationTextWrapper}>
-        <h3 className={`${styles.generationHeading} ${myFont.className}`}>
+        <h3
+          className={`${styles.generationHeading} ${myFont.className}`}
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           Learn from a new <br /> generation of Musicians
         </h3>
-        <p className={styles.generationBody}>
+        <p
+          className={styles.generationBody}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Here are just a few of our incredible instructors.
         </p>
       </div>

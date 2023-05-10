@@ -10,7 +10,7 @@ export default function HowItWorks() {
       <div className={styles.howItWorksTextWrapper}>
         <h3
           className={`${styles.howItWorksHeading} ${myFont.className}`}
-          data-aos="fade-down"
+          data-aos="fade-up"
           data-aos-delay="100"
         >
           Build confidence in playing music with ThinkMusik

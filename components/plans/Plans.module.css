@@ -69,12 +69,12 @@
 }
 
 .currentPlanAccentLeft {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
-/* .currentPlanAccentLeft2 {
+.currentPlanAccentLeft2 {
   transform: translateX(-200%);
-} */
+}
 
 .planDetails {
   display: flex;

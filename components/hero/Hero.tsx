@@ -128,7 +128,6 @@ export default function Hero() {
             <div
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
-              data-aos-duration="800"
               key={index}
               className={
                 index === 1

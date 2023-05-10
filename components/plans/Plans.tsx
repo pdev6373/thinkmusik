@@ -60,6 +60,8 @@ const allPlans = [
 
 export default function Plans() {
   const [currentPlan, setCurrentPlan] = useState(allPlans[0]);
+  const [preiousPlan, setPreviousPlan] = useState(allPlans[0]);
+
   const [direction, setDirection] = useState<
     "left" | "right" | "right2" | "left2" | null
   >(null);
@@ -99,6 +101,22 @@ export default function Plans() {
             className={`${styles.planButton} ${myFont.className} ${
               !index ? styles.currentPlanButton : ""
             }`}
+            onClick={() => {
+              setDirection(
+                plan.index === currentPlan.index + 1
+                  ? "right"
+                  : plan.index === currentPlan.index + 2
+                  ? "right2"
+                  : plan.index === currentPlan.index - 1
+                  ? "left"
+                  : plan.index === currentPlan.index - 2
+                  ? "left2"
+                  : null
+              );
+
+              setPreviousPlan(currentPlan);
+              setCurrentPlan(plan);
+            }}
             // onClick={() => {
             //   setDirection(
             //     currentPlan.index > plan.index

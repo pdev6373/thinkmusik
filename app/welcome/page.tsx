@@ -35,7 +35,7 @@ const body = [
 export default function Welcome() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       offset: 0,
     });
   }, []);
