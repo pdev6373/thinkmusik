@@ -132,6 +132,7 @@ export default function Footer() {
               className={styles.footerIcons}
             />
           </a>
+
           <a href="https://www.instagram.com/thinkmusikhq/" target="_blank">
             <Image
               src="/social_icon1.svg"
