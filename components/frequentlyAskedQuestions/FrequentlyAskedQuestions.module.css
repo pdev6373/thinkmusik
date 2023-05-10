@@ -160,7 +160,15 @@
   height: 0;
   opacity: 0;
   font-size: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
+}
+
+.questionInput + .question > .dropDownIcon {
+  transition: transform 0.2s;
+}
+
+.questionInput:checked + .question > .dropDownIcon {
+  transform: rotate(-180deg);
 }
 
 .questionInput:checked + .question + .answers {

@@ -5,6 +5,7 @@
   gap: 9vw;
   text-align: left;
   font-size: inherit;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1200px) {

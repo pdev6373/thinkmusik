@@ -105,6 +105,7 @@ export default function FrequentlyAskedQuestions() {
                 id={question.question}
                 className={styles.questionInput}
                 checked={question.question === currentQuestion}
+                onChange={() => {}}
               />
               <label
                 htmlFor={question.question}
@@ -123,6 +124,7 @@ export default function FrequentlyAskedQuestions() {
                   alt="dropdown"
                   width={24}
                   height={24}
+                  className={styles.dropDownIcon}
                 />
               </label>
 

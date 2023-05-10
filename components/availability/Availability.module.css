@@ -1,6 +1,8 @@
 .callToActionOuter {
   font-size: clamp(36px, 3.3vw, 40px);
   padding: 1.7916667em 5.55555% 2.45833em;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 .callToAction {

@@ -32,54 +32,53 @@
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s;
 }
 
-.currentPlanButton {
+.planButtonCurrent {
+  color: #3375d9;
+}
+
+.accentClass {
+  position: absolute;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-}
-
-.currentPlanAccent {
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 100px;
-  line-height: 1.166667;
-  color: #3375d9;
-  padding: 1em 3.509em;
-  position: absolute;
   background: #ffffff;
   text-align: center;
-  width: 33.3%;
+  padding: 1em 3.509em;
+  border-radius: 100px;
   top: 8px;
   bottom: 8px;
-  left: 8px;
-  transition: left 0.3s;
+  left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  width: 33.333%;
 }
 
-.currentPlanAccentRight {
-  left: 33.333%;
+.accentClassFirst {
+  left: 8px;
+  transform: translateX(0%);
 }
 
-.currentPlanAccentRight2 {
-  left: calc(66.6667% - 8px);
+.accentClassSecond {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* .currentPlanAccentLeft {
-  left: -33.333%;
-} */
+.accentClassThird {
+  left: calc(100% - 8px);
+  transform: translateX(-100%);
+}
 
-/* 
-
-
-
-.currentPlanAccentLeft2 {
-  transform: translateX(-200%);
-} */
+.planLabel {
+  display: none;
+}
 
 .planDetails {
   display: flex;
@@ -91,6 +90,7 @@
   margin-inline: auto;
   gap: 0.625em;
   font-size: 32px;
+  position: relative;
 }
 
 .planBody {
@@ -152,6 +152,11 @@
   padding: 1.09375em 3.40625em;
   background: #3375d9;
   border-radius: 50px;
+  transition: transform 0.3s;
+}
+
+.startLearningButton:hover {
+  transform: scale(0.98);
 }
 
 .planHeadingBottom {
@@ -228,6 +233,7 @@
     flex-direction: column;
     gap: 48px;
     max-width: 100%;
+    width: 100%;
   }
 
   .planSnippet {
@@ -238,10 +244,10 @@
 
   .planInfo {
     width: 100%;
+    max-width: 100%;
   }
 
-  .currentPlanButton,
-  .currentPlanAccent {
+  .accentClass {
     font-size: 18px;
   }
 
@@ -255,6 +261,36 @@
   display: none;
 }
 
+.roundDecorationWrapper {
+  position: absolute !important;
+  width: 19vw;
+  min-width: 200px;
+  aspect-ratio: 1/1;
+  top: -176px;
+  left: -6vw;
+}
+
+@media (max-width: 1284px) {
+  .roundDecorationWrapper {
+    top: -126px;
+    left: -8.18vw;
+  }
+}
+
+@media (max-width: 880px) {
+  .roundDecorationWrapper {
+    top: -136px;
+    left: -8.18vw;
+  }
+}
+
+.roundDecoration {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
 @media (max-width: 650px) {
   .plan {
     font-size: clamp(24px, 5.9vw, 36px);
@@ -264,6 +300,10 @@
 @media (max-width: 500px) {
   .plan {
     padding-block: 50px 48px;
+  }
+
+  .roundDecorationWrapper {
+    display: none;
   }
 
   .planDetails {
@@ -300,7 +340,7 @@
   .currentPlanButtonMobile {
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.15;
+    line-height: 0.85;
     background: #ffffff;
     color: #3375d9;
   }

@@ -3,11 +3,19 @@
 import Image from "next/image";
 import styles from "./Plans.module.css";
 import localFont from "next/font/local";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
-const allPlans = [
+interface AllPlansType {
+  index: number;
+  type: "Monthly" | "Annually" | "Quarterly";
+  access: string;
+  price: string;
+  items: string[];
+}
+
+const allPlans: AllPlansType[] = [
   {
     index: 1,
     type: "Monthly",
@@ -59,32 +67,7 @@ const allPlans = [
 ];
 
 export default function Plans() {
-  const [currentPlan, setCurrentPlan] = useState(allPlans[0]);
-  const [preiousPlan, setPreviousPlan] = useState(allPlans[0]);
-
-  const [direction, setDirection] = useState<
-    "left" | "right" | "right2" | "left2" | null
-  >(null);
-  let [accentClass, setAccentClass] = useState(
-    `${styles.currentPlanAccent} ${myFont.className}`
-  );
-
-  useEffect(() => {
-    direction &&
-      setAccentClass(
-        `${styles.currentPlanAccent} ${myFont.className} ${
-          direction === "left"
-            ? styles.currentPlanAccentLeft
-            : direction === "right"
-            ? styles.currentPlanAccentRight
-            : direction === "left2"
-            ? styles.currentPlanAccentLeft2
-            : direction === "right2"
-            ? styles.currentPlanAccentRight2
-            : ""
-        }`
-      );
-  }, [direction]);
+  const [currentPlan, setCurrentPlan] = useState(allPlans[0].type);
 
   return (
     <section className={styles.plan}>
@@ -94,45 +77,35 @@ export default function Plans() {
       </h3>
 
       <div className={styles.allPlans}>
-        <div className={accentClass}>{currentPlan.type}</div>
+        <div
+          className={`${styles.accentClass} ${
+            currentPlan === "Monthly"
+              ? styles.accentClassFirst
+              : currentPlan === "Quarterly"
+              ? styles.accentClassSecond
+              : styles.accentClassThird
+          }`}
+        ></div>
         {allPlans.map((plan, index) => (
-          <div
-            key={index}
-            className={`${styles.planButton} ${myFont.className} ${
-              !index ? styles.currentPlanButton : ""
-            }`}
-            onClick={() => {
-              setDirection(
-                plan.index === currentPlan.index + 1
-                  ? "right"
-                  : plan.index === currentPlan.index + 2
-                  ? "right2"
-                  : plan.index === currentPlan.index - 1
-                  ? "left"
-                  : plan.index === currentPlan.index - 2
-                  ? "left2"
-                  : null
-              );
-
-              setPreviousPlan(currentPlan);
-              setCurrentPlan(plan);
-            }}
-            // onClick={() => {
-            //   setDirection(
-            //     currentPlan.index > plan.index
-            //       ? direction === "left" || currentPlan.index - plan.index === 2
-            //         ? "left2"
-            //         : "left"
-            //       : direction === "right" ||
-            //         plan.index - currentPlan.index === 2
-            //       ? "right2"
-            //       : "right"
-            //   );
-            //   setCurrentPlan(plan);
-            // }}
-          >
-            {plan.type}
-          </div>
+          <Fragment key={index}>
+            <input
+              type="radio"
+              id={plan.type}
+              name="plans"
+              className={styles.planLabel}
+              value={currentPlan}
+              onClick={(e: any) => setCurrentPlan(plan.type)}
+            />
+            <label
+              htmlFor={plan.type}
+              className={`${styles.planButton} ${myFont.className} ${
+                currentPlan === plan.type ? styles.planButtonCurrent : ""
+              }`}
+              onClick={() => setCurrentPlan(plan.type)}
+            >
+              {plan.type}
+            </label>
+          </Fragment>
         ))}
       </div>
 
@@ -150,10 +123,19 @@ export default function Plans() {
       </div>
 
       <div className={styles.planDetails}>
+        <div className={styles.roundDecorationWrapper}>
+          <Image
+            src="/round_decoration.png"
+            alt="round decoration"
+            fill
+            className={styles.roundDecoration}
+          />
+        </div>
+
         <div className={styles.planDetailsTop}>
           <div className={styles.planSnippet}>
             <h3 className={`${styles.planHeadingBottom} ${myFont.className}`}>
-              {allPlans[0].type} Plan
+              {currentPlan} Plan
             </h3>
             <p className={styles.planText}>{allPlans[0].access}</p>
             <div className={styles.planPriceWrapper}>
@@ -173,7 +155,7 @@ export default function Plans() {
 
         <div className={styles.planInfo}>
           <h3 className={`${styles.planInfoHeading} ${myFont.className}`}>
-            {allPlans[0].type} plan includes:
+            {currentPlan} plan includes:
           </h3>
 
           <div className={styles.items}>

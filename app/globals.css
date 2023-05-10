@@ -16,6 +16,7 @@
 
 body {
   background-color: var(--mainColor);
+  overflow-x: hidden;
 }
 
 a {
