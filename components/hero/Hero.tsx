@@ -56,12 +56,22 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroTop}>
-        <h2 className={`${styles.header} ${myFont.className}`}>
+        <h2
+          className={`${styles.header} ${myFont.className}`}
+          data-aos="fade-down"
+          data-aos-delay="0"
+        >
           Learn, Master
-          <p className={`${styles.headerAccent} ${myFont.className}`}>Guitar</p>
+          <p
+            className={`${styles.headerAccent} ${myFont.className}`}
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Guitar
+          </p>
         </h2>
 
-        <p className={styles.text}>
+        <p className={styles.text} data-aos="fade-up" data-aos-delay="400">
           Perfect Your Musical Skills Anytime, Anywhere with Expert Guidance and
           Interactive Lessons and Become a Skilled Musician
         </p>
@@ -71,7 +81,11 @@ export default function Hero() {
         <MainButton onClick={() => {}} text="Get Started" type="large" />
       </div>
 
-      <div className={styles.heroImagesWrapper}>
+      <div
+        className={styles.heroImagesWrapper}
+        data-aos="fade-up"
+        data-aos-delay="1000"
+      >
         {heroImages.map((image, index) => (
           <div className={styles.heroImageWrapper} key={index}>
             {index === 1 && (
@@ -112,6 +126,9 @@ export default function Hero() {
         <div className={styles.detailsWrapper}>
           {details.map((detail, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay={100 * (index + 1)}
+              data-aos-duration="800"
               key={index}
               className={
                 index === 1

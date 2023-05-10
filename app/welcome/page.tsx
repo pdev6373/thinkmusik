@@ -1,4 +1,6 @@
 "use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import {
   Availability,
@@ -15,7 +17,7 @@ import {
   Steps,
 } from "@/components";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const body = [
   {
@@ -31,6 +33,13 @@ const body = [
 ];
 
 export default function Welcome() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 0,
+    });
+  }, []);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (

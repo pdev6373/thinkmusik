@@ -27,9 +27,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerNav}>
-        <div className={styles.footerNavTop}>
+        <div
+          className={styles.footerNavTop}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           {/* <Image src="/logo_light.svg" alt="logo" width={202} height={51} /> */}
-          <Image src="/logo.svg" alt="logo" width={158} height={52} />
+          <Image src="/logo_light.png" alt="logo" width={202} height={51} />
           <p className={styles.footerNavTopText}>
             The fastest and fun way to learn and get better at playing any
             instrument
@@ -59,9 +63,14 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerNavWrapper}>
-          {footerItems.map((item) => {
+          {footerItems.map((item, index) => {
             return (
-              <div key={item.title} className={styles.footerNavWrapperItem}>
+              <div
+                key={item.title}
+                className={styles.footerNavWrapperItem}
+                data-aos="fade-up"
+                data-aos-delay={100 * (index + 1)}
+              >
                 <h3 className={`${styles.footerTitle} ${myFont.className}`}>
                   {item.title}
                 </h3>
@@ -79,45 +88,65 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.terms}>
+      <div className={styles.terms} data-aos="fade-up" data-aos-delay="300">
         <div className={styles.privacyWrapper}>
           <p className={styles.termsText}>Privacy</p>
           <p className={styles.termsText}>Terms</p>
         </div>
 
-        <div className={styles.footerIconsWrapper}>
-          <Image
-            src="/social_icon4.svg"
-            alt="social icon"
-            width={24}
-            height={24}
-            className={styles.footerIcons}
-          />
-          <Image
-            src="/social_icon3.svg"
-            alt="social icon"
-            width={24}
-            height={24}
-            className={styles.footerIcons}
-          />
-          <Image
-            src="/social_icon2.svg"
-            alt="social icon"
-            width={24}
-            height={24}
-            className={styles.footerIcons}
-          />
-          <Image
-            src="/social_icon1.svg"
-            alt="social icon"
-            width={24}
-            height={24}
-            className={styles.footerIcons}
-          />
+        <div
+          className={styles.footerIconsWrapper}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <a
+            href="https://facebook.com/people/ThinkMusikhq/100092090272031/"
+            target="_blank"
+          >
+            <Image
+              src="/social_icon4.svg"
+              alt="social icon"
+              width={24}
+              height={24}
+              className={styles.footerIcons}
+            />
+          </a>
+          <a href="https://twitter.com/thinkmusikhq" target="_blank">
+            <Image
+              src="/social_icon3.svg"
+              alt="social icon"
+              width={24}
+              height={24}
+              className={styles.footerIcons}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/thinkmusik/"
+            target="_blank"
+          >
+            <Image
+              src="/social_icon2.svg"
+              alt="social icon"
+              width={24}
+              height={24}
+              className={styles.footerIcons}
+            />
+          </a>
+          <a href="https://www.instagram.com/thinkmusikhq/" target="_blank">
+            <Image
+              src="/social_icon1.svg"
+              alt="social icon"
+              width={24}
+              height={24}
+              className={styles.footerIcons}
+            />
+          </a>
         </div>
       </div>
 
-      <p className={styles.copyright}>© 2023 ThinkMusic Inc.</p>
+      <p className={styles.copyright} data-aos="fade-up" data-aos-delay="300">
+        © 2023 ThinkMusic Inc.
+      </p>
     </footer>
   );
 }

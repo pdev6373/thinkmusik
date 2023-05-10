@@ -11,10 +11,10 @@ export const metadata = {
   description: "A musician favorite playground.",
   icons: {
     icon: {
-      url: "/logo.svg",
+      url: "/favicon.png",
       type: "image/svg",
     },
-    shortcut: { url: "/logo.svg", type: "image/svg" },
+    shortcut: { url: "/favicon.png", type: "image/svg" },
   },
 };
 

@@ -17,13 +17,27 @@ export default function BodyContainer({
 
   return (
     <div
+      data-aos="fade-up"
+      data-aos-delay="300"
       className={`${styles.wrapper} ${
         shouldReverse ? styles.wrapperReverse : null
       }`}
     >
       <div>
-        <h3 className={`${styles.header} ${myFont.className}`}>{header}</h3>
-        <p className={styles.body}>{body}</p>
+        <h3
+          className={`${styles.header} ${myFont.className}`}
+          data-aos={shouldReverse ? "fade-left" : "fade-right"}
+          data-aos-delay="300"
+        >
+          {header}
+        </h3>
+        <p
+          className={styles.body}
+          data-aos={shouldReverse ? "fade-left" : "fade-right"}
+          data-aos-delay="400"
+        >
+          {body}
+        </p>
         {hasButton && (
           <div className={styles.buttonWrapper}>
             <SecondaryButton
@@ -34,7 +48,11 @@ export default function BodyContainer({
         )}
       </div>
 
-      <div className={styles.imageWrapper}>
+      <div
+        className={styles.imageWrapper}
+        data-aos={!shouldReverse ? "zoom-in-left" : "zoom-in-right"}
+        data-aos-delay="100"
+      >
         <Image
           src={image}
           alt="container image"

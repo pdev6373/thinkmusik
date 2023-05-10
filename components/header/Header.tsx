@@ -19,7 +19,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
   const handleNavClose = () => setIsNavOpen(false);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-aos="fade-down" data-aos-delay="0">
       <div className={styles.logoWrapper}>
         <Image src="logo.svg" alt="logo" fill />
       </div>
