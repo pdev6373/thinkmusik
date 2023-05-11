@@ -5,12 +5,12 @@ import localFont from "next/font/local";
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
 const instructors = [
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
 ];
 
 export default function Instructors() {
@@ -36,6 +36,15 @@ export default function Instructors() {
       <div className={styles.instructors}>
         {instructors.map((instructor, index) => (
           <div className={styles.instructorsWrapper} key={index}>
+            <div className={styles.coursesImageOverlay}>
+              <h3
+                className={`${styles.coursesImageOverlayHeader} ${myFont.className}`}
+              >
+                Guitar Beginners <br />
+                Full course
+              </h3>
+              <p className={styles.coursesImageOverlayBody}>Melanie Johns</p>
+            </div>
             <Image
               src={instructor}
               alt="instructor image"
