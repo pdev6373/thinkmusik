@@ -134,10 +134,14 @@
     outline: 1px solid #3375d9;
   }
 
+  .expectationBoxInner {
+    font-size: 28px;
+  }
+
   .expectationDetailsInner {
     display: flex;
     flex-direction: column;
-    font-size: 28px;
+    font-size: inherit;
   }
 
   .expectation {
@@ -161,7 +165,7 @@
     margin-bottom: 27px;
   }
 
-  .expectationDetailsInner {
+  .expectationBoxInner {
     font-size: 20px;
   }
 }
