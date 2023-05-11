@@ -71,7 +71,11 @@ export default function Plans() {
 
   return (
     <section className={styles.plan}>
-      <h3 className={`${styles.planHeading} ${myFont.className}`}>
+      <h3
+        className={`${styles.planHeading} ${myFont.className}`}
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         Choose a plan that&#39;s <br />
         right for you
       </h3>

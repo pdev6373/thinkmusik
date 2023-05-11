@@ -11,8 +11,8 @@ export default function Availability() {
         <div className={styles.callToActionInner}>
           <div
             className={styles.laptopWrapper}
-            // data-aos="fade-right"
-            // data-aos-delay="100"
+            data-aos="fade-right"
+            data-aos-delay="100"
           >
             <Image
               src="/laptop.png"
@@ -25,24 +25,24 @@ export default function Availability() {
           <div className={styles.availability}>
             <h3
               className={`${styles.availabilityHeading} ${myFont.className}`}
-              // data-aos="fade-left"
-              // data-aos-delay="100"
+              data-aos="fade-left"
+              data-aos-delay="100"
             >
               Available for all devices: <br />
               Web, Mobile, Tablet
             </h3>
             <p
               className={styles.availabilityText}
-              // data-aos="fade-left"
-              // data-aos-delay="200"
+              data-aos="fade-left"
+              data-aos-delay="200"
             >
               For Mobile and Tablet you can download via <br /> playstore or
               Appstore below
             </p>
             <div
               className={styles.platforms}
-              // data-aos="fade-left"
-              // data-aos-delay="200"
+              data-aos="fade-left"
+              data-aos-delay="200"
             >
               <Image
                 src="/google.svg"

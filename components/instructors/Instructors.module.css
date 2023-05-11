@@ -65,6 +65,12 @@
   border-radius: 50px;
   background: #fff;
   padding: 1.09375em 2.28125em;
+  transition: all 0.2s;
+}
+
+.viewAllInstructorsButton:hover {
+  background: #3375d9;
+  color: #fff;
 }
 
 .viewAllInstructorsButtonWrapper {

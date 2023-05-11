@@ -17,8 +17,8 @@ export default function BodyContainer({
 
   return (
     <div
-      // data-aos="fade-up"
-      // data-aos-delay="300"
+      data-aos="fade-up"
+      data-aos-delay="300"
       className={`${styles.wrapper} ${
         shouldReverse ? styles.wrapperReverse : null
       }`}
@@ -26,15 +26,15 @@ export default function BodyContainer({
       <div>
         <h3
           className={`${styles.header} ${myFont.className}`}
-          // data-aos={shouldReverse ? "fade-left" : "fade-right"}
-          // data-aos-delay="300"
+          data-aos={shouldReverse ? "fade-left" : "fade-right"}
+          data-aos-delay="300"
         >
           {header}
         </h3>
         <p
           className={styles.body}
-          // data-aos={shouldReverse ? "fade-left" : "fade-right"}
-          // data-aos-delay="400"
+          data-aos={shouldReverse ? "fade-left" : "fade-right"}
+          data-aos-delay="400"
         >
           {body}
         </p>
@@ -50,8 +50,8 @@ export default function BodyContainer({
 
       <div
         className={styles.imageWrapper}
-        // data-aos={!shouldReverse ? "zoom-in-left" : "zoom-in-right"}
-        // data-aos-delay="100"
+        data-aos={!shouldReverse ? "zoom-in-left" : "zoom-in-right"}
+        data-aos-delay="100"
       >
         <Image
           src={image}
