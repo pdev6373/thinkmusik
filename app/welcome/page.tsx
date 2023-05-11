@@ -66,7 +66,7 @@ export default function Welcome() {
             ))}
           </div>
           <Instructors />
-          <Plans />
+          {/* <Plans /> */}
           <Availability />
           <FrequentlyAskedQuestions />
           <Footer />

@@ -114,8 +114,9 @@ export default function Plans() {
           <button
             key={index}
             className={`${styles.planButtonMobile} ${myFont.className} ${
-              !index ? styles.currentPlanButtonMobile : ""
+              currentPlan === plan.type ? styles.currentPlanButtonMobile : ""
             }`}
+            onClick={() => setCurrentPlan(plan.type)}
           >
             {plan.type}
           </button>
