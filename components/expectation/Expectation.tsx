@@ -40,20 +40,22 @@ const expectations = [
 
 export default function Expectation() {
   const [currentItem, setCurrentItem] = useState(expectations[0]);
+  const [isCurrent, setIsCurrent] = useState(false);
+
   return (
     <section className={styles.expectation}>
       <div className={styles.expectationTextWrapper}>
         <h3
           className={`${styles.expectationHeading} ${myFont.className}`}
-          // data-aos="fade-up"
-          // data-aos-delay="100"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           What to expect from each lesson
         </h3>
         <p
           className={styles.expectationBody}
-          // data-aos="fade-up"
-          // data-aos-delay="200"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           ThinkMusic&#39;s learning features are designed to give you a guided,
           structured approach so you can make lasting progress.
@@ -64,16 +66,35 @@ export default function Expectation() {
         <div className={styles.expectationBoxWrapper}>
           {expectations.map((expectation, index) => (
             <div
-              className={!index ? styles.expectationBoxInner : ""}
+              className={`${styles.expectationBoxInner} ${
+                currentItem.heading === expectation.heading
+                  ? styles.expectationBoxInnerCurrent
+                  : ""
+              }`}
               key={index}
             >
-              <div
+              <input
+                type="checkbox"
+                className={styles.expectationCheck}
+                id={expectation.heading}
+                checked={
+                  currentItem.heading === expectation.heading && !isCurrent
+                }
+              />
+              <label
+                htmlFor={expectation.heading}
                 className={
                   expectation.heading === currentItem.heading
                     ? `${styles.expectationBox} ${styles.expectationBoxCurrent}`
                     : styles.expectationBox
                 }
-                onClick={() => setCurrentItem(expectation)}
+                onClick={() => {
+                  if (expectation.heading === currentItem.heading)
+                    setIsCurrent((prev) => !prev);
+                  else setIsCurrent(false);
+
+                  setCurrentItem(expectation);
+                }}
               >
                 <Image
                   src={expectation.icon}
@@ -86,6 +107,23 @@ export default function Expectation() {
                 >
                   {expectation.heading}
                 </h3>
+              </label>
+
+              <div className={styles.expectationDetailsInner}>
+                <h3
+                  className={`${myFont.className} ${styles.expectationHeaderBody}`}
+                >
+                  {currentItem.heading}
+                </h3>
+                <p className={styles.expectationBodyText}>{currentItem.body}</p>
+                <div className={styles.expectationImageWrapper}>
+                  <Image
+                    src={currentItem.image}
+                    alt="expection image"
+                    fill
+                    className={styles.expectationImage}
+                  />
+                </div>
               </div>
             </div>
           ))}

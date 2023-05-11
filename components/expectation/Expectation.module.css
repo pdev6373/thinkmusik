@@ -128,13 +128,15 @@
 
   .expectationBoxInner {
     border-radius: 10px;
+  }
+
+  .expectationBoxInnerCurrent {
     outline: 1px solid #3375d9;
   }
 
   .expectationDetailsInner {
     display: flex;
     flex-direction: column;
-    padding: 43px 20px 30px;
     font-size: 28px;
   }
 
@@ -162,4 +164,32 @@
   .expectationDetailsInner {
     font-size: 20px;
   }
+}
+
+.expectationCheck {
+  display: none;
+}
+
+.expectationCheck + .expectationBox + .expectationDetailsInner {
+  height: 0;
+  opacity: 0;
+  font-size: 0;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+  padding: 0;
+}
+
+.expectationCheck + .expectationBox > .expectationDetailsInner {
+  transition: transform 0.2s;
+}
+
+.expectationCheck:checked + .expectationBox > .expectationDetailsInner {
+  transform: rotate(-180deg);
+}
+
+.expectationCheck:checked + .expectationBox + .expectationDetailsInner {
+  height: auto;
+  opacity: 1;
+  font-size: inherit;
+  padding: 43px 20px 30px;
 }
