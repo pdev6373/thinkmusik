@@ -65,10 +65,10 @@ export default function Hero() {
         >
           Learn, Master
           <div className={styles.instrumentWrapper}>
-            {instruments.map((instrument) => (
+            {instruments.map((instrument, index) => (
               <p
                 className={`${styles.headerAccent} ${myFont.className}`}
-                key={instrument}
+                key={index}
                 data-aos="fade-down"
                 data-aos-delay="100"
               >

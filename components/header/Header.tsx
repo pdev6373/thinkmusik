@@ -26,7 +26,11 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
   const handleNavClose = () => setIsNavOpen(false);
 
   return (
-    <header className={styles.header} data-aos="fade-down" data-aos-delay="0">
+    <header
+      className={`${styles.header} ${isNavOpen ? styles.headerStatic : ""}`}
+      data-aos="fade-down"
+      data-aos-delay="0"
+    >
       <div className={styles.logoWrapper}>
         <Image src="logo.svg" alt="logo" fill />
       </div>
@@ -54,9 +58,9 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
 
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            {navs.map((nav: NavTypes) => (
+            {navs.map((nav: NavTypes, index) => (
               <li
-                key={nav.name}
+                key={index}
                 className={styles.navItem}
                 onClick={() => {
                   if (currentNav === nav.name) setIsCurrent((prev) => !prev);
@@ -87,8 +91,8 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                 {nav.subRoutes?.length && (
                   <div className={styles.subRoutes}>
                     <div className={styles.subRoutesInner}>
-                      {nav.subRoutes.map((route) => (
-                        <p className={styles.subRoute} key={route.name}>
+                      {nav.subRoutes.map((route, index) => (
+                        <p className={styles.subRoute} key={index}>
                           {route.name}
                         </p>
                       ))}
@@ -111,8 +115,8 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                             </h3>
 
                             <div className={styles.navInner}>
-                              {nav.content.map((nav) => (
-                                <p className={styles.subRoute} key={nav.name}>
+                              {nav.content.map((nav, index) => (
+                                <p className={styles.subRoute} key={index}>
                                   {nav.name}
                                 </p>
                               ))}
@@ -130,8 +134,8 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                   isCurrent && (
                     <div className={styles.subRoutesMobile}>
                       <div className={styles.subRoutesInnerMobile}>
-                        {nav.subRoutes.map((route) => (
-                          <p className={styles.subRouteMobile} key={route.name}>
+                        {nav.subRoutes.map((route, index) => (
+                          <p className={styles.subRouteMobile} key={index}>
                             {route.name}
                           </p>
                         ))}
@@ -148,8 +152,8 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                         className={`${styles.subRoutesInnerMobile} ${styles.subNavsInnerMobile}`}
                       >
                         <div className={styles.subNavMobile}>
-                          {nav.subNav.map((nav) => (
-                            <div key={nav.title}>
+                          {nav.subNav.map((nav, index) => (
+                            <div key={index}>
                               <h3
                                 className={`${styles.subNavHeader} ${myFont.className}`}
                               >
@@ -157,8 +161,8 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                               </h3>
 
                               <div className={styles.navInner}>
-                                {nav.content.map((nav) => (
-                                  <p className={styles.subRoute} key={nav.name}>
+                                {nav.content.map((nav, index) => (
+                                  <p className={styles.subRoute} key={index}>
                                     {nav.name}
                                   </p>
                                 ))}

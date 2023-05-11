@@ -64,6 +64,7 @@ export default function Courses() {
         </div>
 
         <Swiper
+          loop={true}
           cssMode={true}
           navigation={true}
           pagination={true}

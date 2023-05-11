@@ -80,6 +80,7 @@ export default function Expectation() {
                 checked={
                   currentItem.heading === expectation.heading && !isCurrent
                 }
+                onChange={() => {}}
               />
               <label
                 htmlFor={expectation.heading}

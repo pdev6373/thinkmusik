@@ -5,9 +5,13 @@
   padding: 18.5px 5.55555%;
   position: sticky;
   top: 0;
-  z-index: 20000000;
+  z-index: 2000;
   background: #fff;
   box-shadow: 0 -6px 10px 5px rgba(164, 159, 159, 0.139);
+}
+
+.headerStatic {
+  position: static;
 }
 
 .menuWrapper {
@@ -92,6 +96,7 @@
 }
 
 .subRoutesMobile {
+  position: relative;
   color: #3f3f46;
   font-size: 18px;
   line-height: 1.66667;
