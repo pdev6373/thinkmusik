@@ -58,20 +58,24 @@ export default function Hero() {
       <div className={styles.heroTop}>
         <h2
           className={`${styles.header} ${myFont.className}`}
-          data-aos="fade-down"
-          data-aos-delay="0"
+          // data-aos="fade-down"
+          // data-aos-delay="0"
         >
           Learn, Master
           <p
             className={`${styles.headerAccent} ${myFont.className}`}
-            data-aos="fade-down"
-            data-aos-delay="100"
+            // data-aos="fade-down"
+            // data-aos-delay="100"
           >
             Guitar
           </p>
         </h2>
 
-        <p className={styles.text} data-aos="fade-up" data-aos-delay="400">
+        <p
+          className={styles.text}
+          // data-aos="fade-up"
+          // data-aos-delay="400"
+        >
           Perfect Your Musical Skills Anytime, Anywhere with Expert Guidance and
           Interactive Lessons and Become a Skilled Musician
         </p>
@@ -83,8 +87,8 @@ export default function Hero() {
 
       <div
         className={styles.heroImagesWrapper}
-        data-aos="fade-up"
-        data-aos-delay="1000"
+        // data-aos="fade-up"
+        // data-aos-delay="1000"
       >
         {heroImages.map((image, index) => (
           <div className={styles.heroImageWrapper} key={index}>
@@ -126,8 +130,8 @@ export default function Hero() {
         <div className={styles.detailsWrapper}>
           {details.map((detail, index) => (
             <div
-              data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
+              // data-aos="fade-up"
+              // data-aos-delay={100 * (index + 1)}
               key={index}
               className={
                 index === 1

@@ -26,21 +26,25 @@ export default function Courses() {
         <div className={styles.offerHeadingWrapper}>
           <h3
             className={`${styles.offerHeading} ${myFont.className}`}
-            data-aos="fade-up"
-            data-aos-delay="100"
+            // data-aos="fade-up"
+            // data-aos-delay="100"
           >
             One membership.
           </h3>
           <h3
             className={`${styles.offerHeading2} ${myFont.className}`}
-            data-aos="fade-up"
-            data-aos-delay="100"
+            // data-aos="fade-up"
+            // data-aos-delay="100"
           >
             Access to every course.
           </h3>
         </div>
 
-        <p className={styles.offerBody} data-aos="fade-up" data-aos-delay="200">
+        <p
+          className={styles.offerBody}
+          // data-aos="fade-up"
+          // data-aos-delay="200"
+        >
           Explore in-depth courses designed by experts
         </p>
       </div>

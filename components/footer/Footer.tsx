@@ -29,8 +29,8 @@ export default function Footer() {
       <div className={styles.footerNav}>
         <div
           className={styles.footerNavTop}
-          data-aos="fade-up"
-          data-aos-delay="300"
+          // data-aos="fade-up"
+          // data-aos-delay="300"
         >
           {/* <Image src="/logo_light.svg" alt="logo" width={202} height={51} /> */}
           <Image src="/logo_light.png" alt="logo" width={202} height={51} />
@@ -68,8 +68,8 @@ export default function Footer() {
               <div
                 key={item.title}
                 className={styles.footerNavWrapperItem}
-                data-aos="fade-up"
-                data-aos-delay={100 * (index + 1)}
+                // data-aos="fade-up"
+                // data-aos-delay={100 * (index + 1)}
               >
                 <h3 className={`${styles.footerTitle} ${myFont.className}`}>
                   {item.title}
@@ -88,7 +88,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.terms} data-aos="fade-up" data-aos-delay="300">
+      <div
+        className={styles.terms}
+        // data-aos="fade-up"
+        // data-aos-delay="300"
+      >
         <div className={styles.privacyWrapper}>
           <p className={styles.termsText}>Privacy</p>
           <p className={styles.termsText}>Terms</p>
@@ -96,8 +100,8 @@ export default function Footer() {
 
         <div
           className={styles.footerIconsWrapper}
-          data-aos="fade-up"
-          data-aos-delay="300"
+          // data-aos="fade-up"
+          // data-aos-delay="300"
         >
           <a
             href="https://facebook.com/people/ThinkMusikhq/100092090272031/"
@@ -145,7 +149,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className={styles.copyright} data-aos="fade-up" data-aos-delay="300">
+      <p
+        className={styles.copyright}
+        // data-aos="fade-up"
+        // data-aos-delay="300"
+      >
         © 2023 ThinkMusic Inc.
       </p>
     </footer>

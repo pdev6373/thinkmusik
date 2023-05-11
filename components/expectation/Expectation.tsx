@@ -45,15 +45,15 @@ export default function Expectation() {
       <div className={styles.expectationTextWrapper}>
         <h3
           className={`${styles.expectationHeading} ${myFont.className}`}
-          data-aos="fade-up"
-          data-aos-delay="100"
+          // data-aos="fade-up"
+          // data-aos-delay="100"
         >
           What to expect from each lesson
         </h3>
         <p
           className={styles.expectationBody}
-          data-aos="fade-up"
-          data-aos-delay="200"
+          // data-aos="fade-up"
+          // data-aos-delay="200"
         >
           Pickup Music&#39;s learning features are designed to give you a
           guided, structured approach so you can make lasting progress.

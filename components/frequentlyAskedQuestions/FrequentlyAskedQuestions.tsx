@@ -65,15 +65,15 @@ export default function FrequentlyAskedQuestions() {
         <div className={styles.questionsTextWrapper}>
           <h3
             className={`${styles.questionsHeading} ${myFont.className}`}
-            data-aos="fade-up"
-            data-aos-delay="300"
+            // data-aos="fade-up"
+            // data-aos-delay="300"
           >
             Frequently Asked Questions
           </h3>
           <p
             className={styles.questionsBody}
-            data-aos="fade-up"
-            data-aos-delay="400"
+            // data-aos="fade-up"
+            // data-aos-delay="400"
           >
             If your questions aren&#39;t answered below, please chat with us.
           </p>
