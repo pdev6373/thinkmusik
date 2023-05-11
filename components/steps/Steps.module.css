@@ -1,7 +1,8 @@
 .step {
   font-size: clamp(36px, 3.3vw, 48px);
   background-color: #fff;
-  padding: 2.27083em 5.55555%;
+  padding: 2.27083em 5.55555% 1.2em;
+  position: relative;
 }
 
 .stepHeading {
@@ -23,19 +24,73 @@
   color: #05274c;
 }
 
+.stepTextWrapper {
+  position: relative;
+  z-index: 2;
+}
+
 .cardWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
   gap: 4.1667vw;
 }
 
+.wowWrapper {
+  position: absolute !important;
+  width: 170px;
+  left: 8.19vw;
+  top: 46px;
+}
+
+.wow {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@media (max-width: 1370px) {
+  .wowWrapper {
+    top: 30px;
+  }
+}
+
 @media (max-width: 1250px) {
   .step {
     padding-inline: max(3%, 20px);
   }
+
+  .wowWrapper {
+    top: 60px;
+    left: 5vw;
+    width: 120px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .wowWrapper {
+    top: 100px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wowWrapper {
+    top: 30px;
+  }
+}
+
+@media (max-width: 658px) {
+  .wowWrapper {
+    top: 16px;
+  }
 }
 
 @media (max-width: 650px) {
+  .wowWrapper {
+    display: none;
+  }
+
   .step {
     font-size: clamp(24px, 5.9vw, 36px);
     padding: 40px;

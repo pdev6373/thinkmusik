@@ -3,6 +3,7 @@ import styles from "./Steps.module.css";
 import localFont from "next/font/local";
 import Card from "../card/Card";
 import { CardTypes } from "@/types";
+import Image from "next/image";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
@@ -24,19 +25,19 @@ const cardDetails: CardTypes[] = [
 export default function Steps() {
   return (
     <section className={styles.step}>
+      <div className={styles.wowWrapper}>
+        <Image src="/wow.svg" alt="circle" className={styles.wow} fill />
+      </div>
+
       <div className={styles.stepTextWrapper}>
         <h3
           className={`${styles.stepHeading} ${myFont.className}`}
-          // data-aos="fade-up"
-          // data-aos-delay="100"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           Step-by-step learning
         </h3>
-        <p
-          className={styles.stepBody}
-          // data-aos="fade-up"
-          // data-aos-delay="100"
-        >
+        <p className={styles.stepBody} data-aos="fade-up" data-aos-delay="100">
           Whether you&#39;re just starting out or you already have some skills -
           we&#39;ve <br /> got the right learning pathway for you.
         </p>
@@ -46,9 +47,9 @@ export default function Steps() {
         {cardDetails.map((details, index) => (
           <div
             key={index}
-            // data-aos="fade-up"
-            // data-aos-delay={100 * (index + 1)}
-            // data-aos-offset="250"
+            data-aos="fade-up"
+            data-aos-delay={100 * (index + 1)}
+            data-aos-offset="250"
           >
             <Card header={details.header} body={details.body} />
           </div>

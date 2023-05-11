@@ -155,8 +155,11 @@
     margin-bottom: 26px;
   }
 
+  .expectationBodyText {
+    font-size: 16px;
+  }
+
   .expectationBody,
-  .expectationBodyText,
   .expectationBox {
     font-size: 18px;
   }

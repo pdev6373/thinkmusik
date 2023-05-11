@@ -52,30 +52,33 @@ const body: BodyTypes[] = [
   },
 ];
 
+const instruments = ["Guitar", "Piano", "Bass", "Drums", "Guitar"];
+
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroTop}>
         <h2
           className={`${styles.header} ${myFont.className}`}
-          // data-aos="fade-down"
-          // data-aos-delay="0"
+          data-aos="fade-down"
+          data-aos-delay="0"
         >
           Learn, Master
-          <p
-            className={`${styles.headerAccent} ${myFont.className}`}
-            // data-aos="fade-down"
-            // data-aos-delay="100"
-          >
-            Guitar
-          </p>
+          <div className={styles.instrumentWrapper}>
+            {instruments.map((instrument) => (
+              <p
+                className={`${styles.headerAccent} ${myFont.className}`}
+                key={instrument}
+                data-aos="fade-down"
+                data-aos-delay="100"
+              >
+                {instrument}
+              </p>
+            ))}
+          </div>
         </h2>
 
-        <p
-          className={styles.text}
-          // data-aos="fade-up"
-          // data-aos-delay="400"
-        >
+        <p className={styles.text} data-aos="fade-up" data-aos-delay="400">
           Perfect Your Musical Skills Anytime, Anywhere with Expert Guidance and
           Interactive Lessons and Become a Skilled Musician
         </p>
@@ -87,8 +90,8 @@ export default function Hero() {
 
       <div
         className={styles.heroImagesWrapper}
-        // data-aos="fade-up"
-        // data-aos-delay="1000"
+        data-aos="fade-up"
+        data-aos-delay="1000"
       >
         {heroImages.map((image, index) => (
           <div className={styles.heroImageWrapper} key={index}>
@@ -112,6 +115,9 @@ export default function Hero() {
       </div>
 
       <div className={styles.details}>
+        <div className={styles.curveWrapper}>
+          <Image src="/curve2.svg" alt="curve" className={styles.curve} fill />
+        </div>
         <div className={styles.detailsHeader}>
           <p className={`${styles.mostLoved} ${myFont.className}`}>
             Most loved music <br />
@@ -130,8 +136,8 @@ export default function Hero() {
         <div className={styles.detailsWrapper}>
           {details.map((detail, index) => (
             <div
-              // data-aos="fade-up"
-              // data-aos-delay={100 * (index + 1)}
+              data-aos="fade-up"
+              data-aos-delay={100 * (index + 1)}
               key={index}
               className={
                 index === 1

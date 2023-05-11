@@ -59,6 +59,101 @@
   font-size: 16px;
   font-weight: 400;
   line-height: var(--line-height);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #3375d9;
+}
+
+.navItem {
+  position: relative;
+}
+
+.subRoutes {
+  position: absolute;
+  left: 0;
+  width: auto;
+  min-width: 200px;
+  padding-top: 10px;
+  background: #fff;
+
+  color: rgb(106, 106, 106);
+  font-size: 18px;
+  line-height: 1.66667;
+  z-index: 30;
+  border-radius: 8px;
+}
+
+.subRoutesMobile {
+  color: rgb(106, 106, 106);
+  font-size: 18px;
+  line-height: 1.66667;
+  border-radius: 8px;
+  padding-top: 10px;
+}
+
+.subRoutesInner,
+.subRoutesInnerMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 8px;
+  padding: 15px 20px;
+}
+
+.subNavsInner,
+.subNavsInnerMobile {
+  padding: 25px 40px;
+}
+
+.navInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.subNavHeader {
+  font-size: 20px;
+  margin-bottom: 0.8em;
+}
+
+.subNav,
+.subNavMobile {
+  display: flex;
+  gap: 50px;
+}
+
+.subNavMobile {
+  gap: 70px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navLink:hover {
+  color: inherit;
+}
+
+.navItem > .subRoutes {
+  display: none;
+  opacity: 0;
+  transition: all.2s;
+}
+
+.subRoute {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.subRoute:hover {
+  color: #3375d9;
+}
+
+.navItem:hover > .subRoutes {
+  display: block;
+  opacity: 1;
 }
 
 .actions {
@@ -93,6 +188,11 @@
     transition: transform 0.4s;
     background: #fff;
     z-index: 20;
+  }
+
+  .navItem > .subRoutes,
+  .navItem:hover > .subRoutes {
+    display: none;
   }
 
   .navWrapper > .actions {

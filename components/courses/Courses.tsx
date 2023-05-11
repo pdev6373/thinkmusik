@@ -21,63 +21,78 @@ const courses = [
 
 export default function Courses() {
   return (
-    <section className={styles.offer}>
-      <div className={styles.offerTextWrapper}>
-        <div className={styles.offerHeadingWrapper}>
-          <h3
-            className={`${styles.offerHeading} ${myFont.className}`}
-            // data-aos="fade-up"
-            // data-aos-delay="100"
-          >
-            One membership.
-          </h3>
-          <h3
-            className={`${styles.offerHeading2} ${myFont.className}`}
-            // data-aos="fade-up"
-            // data-aos-delay="100"
-          >
-            Access to every course.
-          </h3>
+    <>
+      <div className={styles.curveWrapper}>
+        <Image src="/curve.svg" alt="curve" className={styles.curve} fill />
+      </div>
+
+      <section className={styles.offer}>
+        <div className={styles.circleWrapper}>
+          <Image
+            src="/circle.png"
+            alt="circle"
+            className={styles.circle}
+            fill
+          />
         </div>
 
-        <p
-          className={styles.offerBody}
-          // data-aos="fade-up"
-          // data-aos-delay="200"
+        <div className={styles.offerTextWrapper}>
+          <div className={styles.offerHeadingWrapper}>
+            <h3
+              className={`${styles.offerHeading} ${myFont.className}`}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              One membership.
+            </h3>
+            <h3
+              className={`${styles.offerHeading2} ${myFont.className}`}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Access to every course.
+            </h3>
+          </div>
+
+          <p
+            className={styles.offerBody}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Explore in-depth courses designed by experts
+          </p>
+        </div>
+
+        <Swiper
+          cssMode={true}
+          navigation={true}
+          pagination={true}
+          mousewheel={true}
+          keyboard={true}
+          slidesPerView="auto"
+          spaceBetween={0}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         >
-          Explore in-depth courses designed by experts
-        </p>
-      </div>
+          {courses.map((course, index) => (
+            <SwiperSlide key={index}>
+              <div className={styles.coursesImageWrapper}>
+                <Image
+                  src={course}
+                  alt="course image"
+                  fill
+                  className={styles.coursesImage}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-      <Swiper
-        cssMode={true}
-        navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        slidesPerView="auto"
-        spaceBetween={0}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-      >
-        {courses.map((course, index) => (
-          <SwiperSlide key={index}>
-            <div className={styles.coursesImageWrapper}>
-              <Image
-                src={course}
-                alt="course image"
-                fill
-                className={styles.coursesImage}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      <div className={styles.allCoursesLinkWrapper}>
-        <Link href="/all-courses" className={styles.allCoursesLink}>
-          View all Courses
-        </Link>
-      </div>
-    </section>
+        <div className={styles.allCoursesLinkWrapper}>
+          <Link href="/all-courses" className={styles.allCoursesLink}>
+            View all Courses
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

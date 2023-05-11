@@ -1,6 +1,13 @@
+interface SubNavType {
+  title: string;
+  content: NavTypes[];
+}
+
 export interface NavTypes {
   name: string;
   route: string;
+  subRoutes?: NavTypes[];
+  subNav?: SubNavType[];
 }
 
 export interface BodyTypes {

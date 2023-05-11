@@ -11,12 +11,46 @@
   color: #05274c;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  height: calc(clamp(20px, 4.9vw, 70px));
   gap: 23px;
 }
 
 .headerAccent {
   color: #3375d9;
+  animation: spin 15s infinite;
+  text-align: left;
+}
+
+.instrumentWrapper {
+  overflow: hidden;
+}
+
+@keyframes spin {
+  10% {
+    transform: translateY(-105%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-205%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-305%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-405%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
 }
 
 .heroTop {
@@ -127,6 +161,7 @@
   background-color: #111f39;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .mostLovedImageWrapper {
@@ -136,6 +171,22 @@
 }
 
 .mostLovedImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.curveWrapper {
+  position: absolute !important;
+  bottom: 100%;
+  transform: translateY(calc(50% + 2px));
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.curve {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;
@@ -183,6 +234,10 @@
   .mostLovedImageWrapper {
     width: 48px;
     margin-top: -8px;
+  }
+
+  .curveWrapper {
+    display: none;
   }
 
   .heroImageWrapper:nth-of-type(2) {
@@ -245,11 +300,21 @@
 
   .header {
     flex-direction: column;
+    height: auto;
+    margin-top: -20px;
   }
 
   .headerAccent {
     font-size: 50px;
-    margin-top: -20px;
+  }
+
+  .instrumentWrapper {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5px;
+    margin-bottom: 30px;
   }
 }
 
@@ -274,7 +339,6 @@
     flex-direction: column-reverse;
     align-items: center;
   }
-
   .header {
     font-size: 30px;
     flex-direction: column;
@@ -282,6 +346,9 @@
 
   .headerAccent {
     font-size: 40px;
-    margin-top: -20px;
+  }
+
+  .instrumentWrapper {
+    margin-bottom: 20px;
   }
 }

@@ -2,12 +2,15 @@
   background-color: #ebf5fe;
   padding: 1.333em 5.55555% 1.5416667em;
   font-size: clamp(36px, 3.3vw, 48px);
+  position: relative;
 }
 
 .howItWorksTextWrapper {
   max-width: 780px;
   margin-inline: auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .howItWorksHeading {
@@ -42,13 +45,64 @@
   height: unset !important;
 }
 
+.starWrapper,
+.rocketWrapper {
+  position: absolute !important;
+  width: 30px;
+  left: 14vw;
+  top: 256px;
+}
+
+.rocketWrapper {
+  left: auto;
+  right: 11vw;
+  width: 163px;
+  top: 53px;
+}
+
+.star,
+.rocket {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@media (max-width: 1392px) {
+  .starWrapper {
+    top: 200px;
+  }
+
+  .rocketWrapper {
+    top: 20px;
+    right: 5vw;
+    width: 140px;
+  }
+}
+
 @media (max-width: 1250px) {
   .howItWorks {
     padding-inline: max(3%, 20px);
   }
 }
 
+@media (max-width: 996px) {
+  .rocketWrapper {
+    width: 80px;
+  }
+
+  .starWrapper {
+    width: 18px;
+    top: 120px;
+  }
+}
+
 @media (max-width: 650px) {
+  .rocketWrapper,
+  .starWrapper {
+    display: none;
+  }
+
   .howItWorks {
     font-size: clamp(24px, 5.9vw, 36px);
     padding-block: 52px;

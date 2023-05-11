@@ -38,6 +38,8 @@
 }
 
 .planButtonCurrent {
+  font-weight: 700;
+  font-size: 20px;
   color: #3375d9;
 }
 
@@ -323,7 +325,7 @@
   }
 
   .planButtonMobile {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.166667;
     color: #fff;
