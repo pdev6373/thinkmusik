@@ -55,8 +55,8 @@ export default function Expectation() {
           // data-aos="fade-up"
           // data-aos-delay="200"
         >
-          Pickup Music&#39;s learning features are designed to give you a
-          guided, structured approach so you can make lasting progress.
+          ThinkMusic&#39;s learning features are designed to give you a guided,
+          structured approach so you can make lasting progress.
         </p>
       </div>
 

@@ -29,10 +29,9 @@ export default function Footer() {
       <div className={styles.footerNav}>
         <div
           className={styles.footerNavTop}
-          // data-aos="fade-up"
-          // data-aos-delay="300"
+          data-aos="fade-up"
+          data-aos-delay="300"
         >
-          {/* <Image src="/logo_light.svg" alt="logo" width={202} height={51} /> */}
           <Image src="/logo_light.png" alt="logo" width={202} height={51} />
           <p className={styles.footerNavTopText}>
             The fastest and fun way to learn and get better at playing any
@@ -68,8 +67,8 @@ export default function Footer() {
               <div
                 key={item.title}
                 className={styles.footerNavWrapperItem}
-                // data-aos="fade-up"
-                // data-aos-delay={100 * (index + 1)}
+                data-aos="fade-up"
+                data-aos-delay={100 * (index + 1)}
               >
                 <h3 className={`${styles.footerTitle} ${myFont.className}`}>
                   {item.title}
@@ -88,20 +87,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div
-        className={styles.terms}
-        // data-aos="fade-up"
-        // data-aos-delay="300"
-      >
-        <div className={styles.privacyWrapper}>
+      <div className={styles.terms}>
+        <div
+          className={styles.privacyWrapper}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <p className={styles.termsText}>Privacy</p>
           <p className={styles.termsText}>Terms</p>
         </div>
 
         <div
           className={styles.footerIconsWrapper}
-          // data-aos="fade-up"
-          // data-aos-delay="300"
+          data-aos="fade-up"
+          data-aos-delay="400"
         >
           <a
             href="https://facebook.com/people/ThinkMusikhq/100092090272031/"
@@ -149,13 +148,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p
-        className={styles.copyright}
-        // data-aos="fade-up"
-        // data-aos-delay="300"
-      >
-        © 2023 ThinkMusic Inc.
-      </p>
+      <p className={styles.copyright}>© 2023 ThinkMusic Inc.</p>
     </footer>
   );
 }
