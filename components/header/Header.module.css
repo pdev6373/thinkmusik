@@ -143,10 +143,6 @@
   flex-wrap: wrap;
 }
 
-.navLink:hover {
-  color: inherit;
-}
-
 .navItem > .subRoutes {
   display: none;
   opacity: 0;
@@ -204,6 +200,10 @@
   .navItem > .subRoutes,
   .navItem:hover > .subRoutes {
     display: none;
+  }
+
+  .navLink:hover {
+    color: inherit;
   }
 
   .navWrapper > .actions {

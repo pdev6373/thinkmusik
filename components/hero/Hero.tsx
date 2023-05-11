@@ -52,7 +52,7 @@ const body: BodyTypes[] = [
   },
 ];
 
-const instruments = ["Guitar", "Piano", "Bass", "Drums", "Guitar"];
+const instruments = ["Guitar", "Piano", "Bass", "Guitar"];
 
 export default function Hero() {
   return (

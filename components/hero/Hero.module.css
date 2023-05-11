@@ -18,7 +18,7 @@
 
 .headerAccent {
   color: #3375d9;
-  animation: spin 15s infinite;
+  animation: spin 7s infinite;
   text-align: left;
 }
 
@@ -27,29 +27,23 @@
 }
 
 @keyframes spin {
-  10% {
+  8% {
     transform: translateY(-105%);
   }
-  25% {
+  33% {
     transform: translateY(-100%);
   }
-  35% {
+  41% {
     transform: translateY(-205%);
   }
-  50% {
+  66% {
     transform: translateY(-200%);
   }
-  60% {
+  74% {
     transform: translateY(-305%);
   }
-  75% {
-    transform: translateY(-300%);
-  }
-  85% {
-    transform: translateY(-405%);
-  }
   100% {
-    transform: translateY(-400%);
+    transform: translateY(-300%);
   }
 }
 

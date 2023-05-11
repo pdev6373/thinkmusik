@@ -6,7 +6,7 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
+import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
@@ -26,7 +26,7 @@ export default function Courses() {
         <Image src="/curve.svg" alt="curve" className={styles.curve} fill />
       </div>
 
-      <section className={styles.offer}>
+      <section className={`${styles.offer} courses`}>
         <div className={styles.circleWrapper}>
           <Image
             src="/circle.png"
@@ -64,14 +64,35 @@ export default function Courses() {
         </div>
 
         <Swiper
-          cssMode={true}
+          loop={true}
           navigation={true}
-          pagination={true}
           mousewheel={true}
           keyboard={true}
           slidesPerView="auto"
           spaceBetween={0}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          grabCursor={true}
+          // breakpoints={{
+          //   640: {
+          //     slidesPerView: 2,
+          //     spaceBetween: 20,
+          //   },
+          //   768: {
+          //     slidesPerView: 4,
+          //     spaceBetween: 40,
+          //   },
+          //   1024: {
+          //     slidesPerView: 5,
+          //     spaceBetween: 50,
+          //   },
+          // }}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         >
           {courses.map((course, index) => (
             <SwiperSlide key={index}>

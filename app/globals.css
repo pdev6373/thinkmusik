@@ -38,20 +38,28 @@ button {
   cursor: pointer;
 }
 
-.swiper {
+.instructors .swiper-slide {
+  max-width: 258px;
+}
+
+.courses .swiper {
   width: 100%;
   max-width: 1440px;
   overflow: visible;
 }
 
-.swiper-slide {
+.instructors .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.courses .swiper-slide {
   min-height: 670px;
   /* max-width: 381px; */
   max-width: 411px;
 }
 
 @media (max-width: 450px) {
-  .swiper-slide {
+  .courses .swiper-slide {
     max-width: 286px;
     /* max-width: 262px; */
     min-height: 465px;
@@ -59,7 +67,7 @@ button {
 }
 
 @media (max-width: 300px) {
-  .swiper-slide {
+  .courses .swiper-slide {
     max-width: 220px;
     min-height: 375px;
   }

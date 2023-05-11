@@ -34,19 +34,16 @@
   color: #05274c;
 }
 
-.instructors {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-inline: 20px;
-}
-
 .instructorsWrapper {
   position: relative !important;
   width: 90%;
   margin-inline: auto;
   max-width: 258px;
   min-width: 258px;
+}
+
+.swiperWrapper {
+  transition-timing-function: linear !important;
 }
 
 .instructor {
