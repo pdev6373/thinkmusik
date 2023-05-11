@@ -3,6 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 18.5px 5.55555%;
+  position: sticky;
+  top: 0;
+  z-index: 20000000;
+  background: #fff;
+  box-shadow: 0 -6px 10px 5px rgba(164, 159, 159, 0.139);
 }
 
 .menuWrapper {
@@ -79,7 +84,7 @@
   padding-top: 10px;
   background: #fff;
 
-  color: rgb(106, 106, 106);
+  color: #3f3f46;
   font-size: 18px;
   line-height: 1.66667;
   z-index: 30;
@@ -87,7 +92,7 @@
 }
 
 .subRoutesMobile {
-  color: rgb(106, 106, 106);
+  color: #3f3f46;
   font-size: 18px;
   line-height: 1.66667;
   border-radius: 8px;
@@ -118,6 +123,7 @@
 .subNavHeader {
   font-size: 20px;
   margin-bottom: 0.8em;
+  color: #05274c;
 }
 
 .subNav,

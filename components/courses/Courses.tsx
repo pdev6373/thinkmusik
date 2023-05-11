@@ -11,12 +11,12 @@ import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
 const courses = [
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
-  "/guitar_scroll.png",
-  "/guitar_scroll2.png",
-  "/guitar_scroll3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
 ];
 
 export default function Courses() {
@@ -76,6 +76,17 @@ export default function Courses() {
           {courses.map((course, index) => (
             <SwiperSlide key={index}>
               <div className={styles.coursesImageWrapper}>
+                <div className={styles.coursesImageOverlay}>
+                  <h3
+                    className={`${styles.coursesImageOverlayHeader} ${myFont.className}`}
+                  >
+                    Guitar Beginners <br />
+                    Full course
+                  </h3>
+                  <p className={styles.coursesImageOverlayBody}>
+                    Melanie Johns
+                  </p>
+                </div>
                 <Image
                   src={course}
                   alt="course image"

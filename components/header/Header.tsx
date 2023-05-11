@@ -7,6 +7,9 @@ import { navs } from "@/constant";
 import { NavTypes } from "./../../types";
 import styles from "./Header.module.css";
 import { useState } from "react";
+import localFont from "next/font/local";
+
+const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
 interface HeaderType {
   isNavOpen: boolean;
@@ -63,7 +66,6 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                 }}
               >
                 <div className={styles.navLink}>
-                  {/* <Link href={nav.route} className={styles.navLink}> */}
                   <p>{nav.name}</p>
                   {isNavOpen ? (
                     <Image
@@ -102,7 +104,11 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                       <div className={styles.subNav}>
                         {nav.subNav.map((nav) => (
                           <div key={nav.title}>
-                            <h3 className={styles.subNavHeader}>{nav.title}</h3>
+                            <h3
+                              className={`${styles.subNavHeader} ${myFont.className}`}
+                            >
+                              {nav.title}
+                            </h3>
 
                             <div className={styles.navInner}>
                               {nav.content.map((nav) => (
@@ -144,7 +150,9 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                         <div className={styles.subNavMobile}>
                           {nav.subNav.map((nav) => (
                             <div key={nav.title}>
-                              <h3 className={styles.subNavHeader}>
+                              <h3
+                                className={`${styles.subNavHeader} ${myFont.className}`}
+                              >
                                 {nav.title}
                               </h3>
 
