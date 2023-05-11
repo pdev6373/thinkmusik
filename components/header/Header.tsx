@@ -86,7 +86,9 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                   <div className={styles.subRoutes}>
                     <div className={styles.subRoutesInner}>
                       {nav.subRoutes.map((route) => (
-                        <p className={styles.subRoute}>{route.name}</p>
+                        <p className={styles.subRoute} key={route.name}>
+                          {route.name}
+                        </p>
                       ))}
                     </div>
                   </div>
@@ -99,12 +101,14 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                     >
                       <div className={styles.subNav}>
                         {nav.subNav.map((nav) => (
-                          <div>
+                          <div key={nav.title}>
                             <h3 className={styles.subNavHeader}>{nav.title}</h3>
 
                             <div className={styles.navInner}>
                               {nav.content.map((nav) => (
-                                <p className={styles.subRoute}>{nav.name}</p>
+                                <p className={styles.subRoute} key={nav.name}>
+                                  {nav.name}
+                                </p>
                               ))}
                             </div>
                           </div>
@@ -121,7 +125,9 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                     <div className={styles.subRoutesMobile}>
                       <div className={styles.subRoutesInnerMobile}>
                         {nav.subRoutes.map((route) => (
-                          <p className={styles.subRouteMobile}>{route.name}</p>
+                          <p className={styles.subRouteMobile} key={route.name}>
+                            {route.name}
+                          </p>
                         ))}
                       </div>
                     </div>
@@ -137,14 +143,16 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                       >
                         <div className={styles.subNavMobile}>
                           {nav.subNav.map((nav) => (
-                            <div>
+                            <div key={nav.title}>
                               <h3 className={styles.subNavHeader}>
                                 {nav.title}
                               </h3>
 
                               <div className={styles.navInner}>
                                 {nav.content.map((nav) => (
-                                  <p className={styles.subRoute}>{nav.name}</p>
+                                  <p className={styles.subRoute} key={nav.name}>
+                                    {nav.name}
+                                  </p>
                                 ))}
                               </div>
                             </div>
