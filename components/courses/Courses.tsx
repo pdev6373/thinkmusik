@@ -74,7 +74,7 @@ export default function Courses() {
             clickable: true,
           }}
           autoplay={{
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           grabCursor={true}

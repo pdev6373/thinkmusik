@@ -84,7 +84,11 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className={styles.heroButtonTop}>
+      <div
+        className={styles.heroButtonTop}
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         <MainButton onClick={() => {}} text="Get Started" type="large" />
       </div>
 
