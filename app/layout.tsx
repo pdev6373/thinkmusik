@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={plusJakartaSans.className}>{children}</body>
+      <body className={openSans.className}>{children}</body>
     </html>
   );
 }
