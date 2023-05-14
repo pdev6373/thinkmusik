@@ -55,7 +55,7 @@ export default function Footer() {
               />
               <div>
                 <p className={styles.footerCtaIconHeader}>Available on</p>
-                <p className={styles.footerCtaIconBody}>APP STORE</p>
+                <p className={styles.footerCtaIconBody}>Play STORE</p>
               </div>
             </div>
           </div>
