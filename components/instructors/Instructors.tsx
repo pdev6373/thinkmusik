@@ -62,6 +62,8 @@ export default function Instructors() {
           disableOnInteraction: false,
         }}
         speed={2000}
+        noSwiping={true}
+        allowTouchMove={false}
         modules={[Pagination, Autoplay]}
       >
         {instructors.map((instructor, index) => (

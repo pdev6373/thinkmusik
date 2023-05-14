@@ -33,6 +33,15 @@ export default function HowItWorks() {
       </div>
 
       <div className={styles.confidenceImageWrapper} data-aos="zoom-in">
+        <button className={styles.confidenceButton}>
+          <Image
+            src="/material-symbols_play-circle-outline-rounded.svg"
+            alt="image"
+            fill
+            className={styles.confidenceIcon}
+          />
+          <p>See How it works</p>
+        </button>
         <Image
           src="/confidence.png"
           alt="confidence image"

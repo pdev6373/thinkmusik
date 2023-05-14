@@ -28,8 +28,6 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
   return (
     <header
       className={`${styles.header} ${isNavOpen ? styles.headerStatic : ""}`}
-      data-aos="fade-down"
-      data-aos-delay="0"
     >
       <div className={styles.logoWrapper}>
         <Image src="logo.svg" alt="logo" fill />

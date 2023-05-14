@@ -103,7 +103,7 @@ export default function Hero() {
         <MainButton onClick={() => {}} text="Get Started" type="large" />
       </div>
 
-      <div className={styles.slider}>
+      <div className={styles.slider} data-aos="fade-up" data-aos-delay="400">
         <div className={`${styles.heroImagesWrapper} ${styles.slideTrack}`}>
           {heroImages.map((image, index) => (
             <div className={styles.heroImageWrapper} key={index}>

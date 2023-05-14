@@ -38,8 +38,8 @@
 }
 
 .planButtonCurrent {
-  font-weight: 700;
-  font-size: 20px;
+  /* font-weight: 700;
+  font-size: 20px; */
   color: #3375d9;
 }
 
@@ -340,9 +340,9 @@
   }
 
   .currentPlanButtonMobile {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 0.85;
+    /* font-weight: 700;
+    font-size: 18px; */
+    /* line-height: 0.85; */
     background: #ffffff;
     color: #3375d9;
   }
