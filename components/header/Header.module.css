@@ -69,7 +69,7 @@
   font-weight: 400;
   line-height: var(--line-height);
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 .navLink:hover {
@@ -146,12 +146,12 @@
 .navItem > .subRoutes {
   display: none;
   opacity: 0;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
 .subRoute {
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 .subRoute:hover {
@@ -192,7 +192,7 @@
     align-items: flex-start;
     z-index: 1000;
     overflow-y: scroll;
-    transition: transform 0.4s;
+    transition: transform 0.35s;
     background: #fff;
     z-index: 20;
   }

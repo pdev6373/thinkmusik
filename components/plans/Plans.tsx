@@ -90,6 +90,7 @@ export default function Plans() {
               : styles.accentClassThird
           }`}
         ></div>
+
         {allPlans.map((plan, index) => (
           <Fragment key={index}>
             <input

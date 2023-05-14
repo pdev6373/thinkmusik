@@ -181,13 +181,13 @@
   height: 0;
   opacity: 0;
   font-size: 0;
-  transition: all 0.2s ease-out;
+  transition: all 0.15s ease-out;
   overflow: hidden;
   padding: 0;
 }
 
 .expectationCheck + .expectationBox > .expectationDetailsInner {
-  transition: transform 0.2s;
+  transition: transform 0.15s;
 }
 
 .expectationCheck:checked + .expectationBox > .expectationDetailsInner {

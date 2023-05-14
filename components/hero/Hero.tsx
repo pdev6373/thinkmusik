@@ -19,6 +19,17 @@ const heroImages: string[] = [
   "/hero_image3.png",
 ];
 
+const heroImages2: string[] = [
+  "/hero_image1.png",
+  "/hero_image2.png",
+  "/hero_image3.png",
+  "/hero_image2.png",
+  "/hero_image1.png",
+  "/hero_image2.png",
+  "/hero_image3.png",
+  "/hero_image2.png",
+];
+
 const details: detailsType[] = [
   {
     icon: "video.svg",
@@ -92,30 +103,48 @@ export default function Hero() {
         <MainButton onClick={() => {}} text="Get Started" type="large" />
       </div>
 
-      <div
-        className={styles.heroImagesWrapper}
-        data-aos="fade-up"
-        data-aos-delay="1000"
-      >
-        {heroImages.map((image, index) => (
-          <div className={styles.heroImageWrapper} key={index}>
-            {index === 1 && (
-              <div className={styles.heroButton}>
-                <MainButton
-                  onClick={() => {}}
-                  text="Get Started"
-                  type="large"
-                />
-              </div>
-            )}
-            <Image
-              src={image}
-              alt="hero image"
-              fill
-              className={styles.heroImage}
-            />
-          </div>
-        ))}
+      <div className={styles.slider}>
+        <div className={`${styles.heroImagesWrapper} ${styles.slideTrack}`}>
+          {heroImages.map((image, index) => (
+            <div className={styles.heroImageWrapper} key={index}>
+              {index === 1 && (
+                <div className={styles.heroButton}>
+                  <MainButton
+                    onClick={() => {}}
+                    text="Get Started"
+                    type="large"
+                  />
+                </div>
+              )}
+
+              <Image
+                src={image}
+                alt="hero image"
+                fill
+                className={styles.heroImage}
+              />
+            </div>
+          ))}
+
+          {heroImages2.map((image, index) => (
+            <div
+              className={`${styles.heroImageWrapperSecond} ${
+                index === 1 || index === 3 || index === 5 || index === 7
+                  ? styles.heroImageWrapperSecondChild
+                  : ""
+              }`}
+              key={index}
+            >
+              <Image
+                src={image}
+                alt="hero image"
+                width={200}
+                height={200}
+                className={styles.heroImage}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={styles.details}>

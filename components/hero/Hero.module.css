@@ -11,7 +11,6 @@
   color: #05274c;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: calc(clamp(20px, 4.9vw, 70px));
   gap: 23px;
 }
@@ -70,10 +69,10 @@
   gap: 40.3px;
   background-color: var(--mainColor);
   padding-inline: 5.55555%;
-  overflow-x: auto;
 }
 
-.heroImageWrapper {
+.heroImageWrapper,
+.heroImageWrapperSecond {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -81,9 +80,6 @@
   position: position relative !important;
   z-index: 2;
   flex-grow: 1;
-}
-
-.heroImageWrapper {
   min-width: 137px;
 }
 
@@ -92,11 +88,92 @@
   min-width: 230px;
 }
 
+.heroImageWrapperSecond {
+  display: none;
+}
+
+.slider {
+  overflow: hidden;
+}
+
 .heroImage {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+}
+
+@media (max-width: 590px) {
+  .heroImageWrapper {
+    display: none;
+  }
+
+  .heroImageWrapperSecond {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 137px;
+    max-width: 137px;
+
+    position: unset !important;
+  }
+
+  .heroImagesWrapper {
+    gap: 18px;
+    padding: 0;
+  }
+
+  .heroImageWrapperSecondChild {
+    flex-grow: 1;
+    min-width: 230px;
+    max-width: 230px;
+  }
+
+  .slideTrack {
+    display: flex;
+    width: calc((155px * 4) + (248px * 4));
+    animation: scroll 10s linear infinite;
+  }
+
+  .slider {
+    margin: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.372) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+    top: 0;
+  }
+
+  .slider::before {
+    left: 0;
+  }
+
+  .slider::after {
+    right: 0;
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc((-155px * 2) + (-248px * 2)));
+  }
 }
 
 .bodyContainerWrapper {
@@ -190,7 +267,7 @@
 @media (max-width: 1250px) {
   .details,
   .heroTop,
-  .heroImagesWrapper,
+  /* .heroImagesWrapper, */
   .bodyContainerWrapper {
     padding-inline: max(3%, 20px);
   }

@@ -13,6 +13,24 @@ const instructors = [
   "/guitar.png",
   "/guitar2.png",
   "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
+  "/guitar.png",
+  "/guitar2.png",
+  "/guitar3.png",
 ];
 
 export default function Instructors() {
@@ -38,12 +56,12 @@ export default function Instructors() {
       <Swiper
         loop={true}
         slidesPerView="auto"
-        spaceBetween={30}
+        spaceBetween={0}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
         }}
-        speed={4000}
+        speed={2000}
         modules={[Pagination, Autoplay]}
       >
         {instructors.map((instructor, index) => (
@@ -68,8 +86,6 @@ export default function Instructors() {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <div className={styles.instructors}> */}
-      {/* </div> */}
 
       <div className={styles.viewAllInstructorsButtonWrapper}>
         <button className={styles.viewAllInstructorsButton}>
