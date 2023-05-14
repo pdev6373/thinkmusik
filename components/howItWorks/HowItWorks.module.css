@@ -154,4 +154,8 @@
   .confidenceIcon {
     max-width: 17.4px;
   }
+
+  .confidenceImageWrapper {
+    width: 100%;
+  }
 }
