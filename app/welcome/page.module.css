@@ -1,3 +1,7 @@
+.welcome {
+  overflow: hidden;
+}
+
 @media (max-width: 450px) {
   .howItWorksBody,
   .planBody {

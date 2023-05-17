@@ -41,7 +41,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
         }
       >
         <div className={styles.navHeader}>
-          <div className={styles.logoWrapper}>
+          <div className={styles.logoWrapper2}>
             <Image src="logo.svg" alt="logo" fill />
           </div>
 
@@ -75,6 +75,11 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                       alt="dropdown"
                       width="24"
                       height="24"
+                      className={
+                        isCurrent
+                          ? styles.headerDropdownMobileCurrent
+                          : styles.headerDropdownMobile
+                      }
                     />
                   ) : (
                     <Image
@@ -82,6 +87,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
                       alt="dropdown"
                       width="24"
                       height="24"
+                      className={styles.headerDropdown}
                     />
                   )}
                 </div>
@@ -177,7 +183,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderType) {
         </nav>
 
         <div className={styles.actions}>
-          <Link href="/login" className={styles.login}>
+          <Link href="/login" className={styles.login} onClick={hanldeLogin}>
             Login
           </Link>
           <MainButton onClick={handleSignup} text="Sign up" type="large" />
