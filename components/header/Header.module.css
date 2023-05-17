@@ -8,7 +8,7 @@
   z-index: 2000;
   background: #fff;
   box-shadow: 0 -6px 10px 5px rgba(164, 159, 159, 0.139);
-  animation: animateHeader 1.5s 1.5s ease-in-out forwards;
+  animation: animateHeader 1.3s 1s ease-in-out forwards;
   transform: translateY(-150%);
 }
 
@@ -197,7 +197,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 100%;
+    left: 100%;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -205,10 +205,6 @@
     transition: transform 0.35s;
     background: #fff;
     z-index: 20;
-  }
-
-  .navWrapperOpen {
-    transition: transform 0.35s;
   }
 
   .navItem > .subRoutes,
@@ -225,8 +221,9 @@
   }
 
   .navWrapperOpen {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     background-color: #fff;
+    transition: transform 0.35s;
   }
 
   .menuWrapper {

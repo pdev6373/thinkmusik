@@ -54,25 +54,6 @@
   place-items: center;
 }
 
-.slider::before,
-.slider::after {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.372) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 15%;
-  z-index: 2;
-  top: 0;
-}
-
-.slider::before {
-  left: 0;
-}
-
 .slideTrack,
 .slideTrackScroll {
   display: flex;
@@ -94,11 +75,6 @@
     display: flex;
     animation: scroll 10s linear infinite;
   }
-}
-
-.slider::after {
-  right: 0;
-  transform: rotateZ(180deg);
 }
 
 @keyframes scroll {
