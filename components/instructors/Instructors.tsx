@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "./Instructors.module.css";
 import localFont from "next/font/local";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
 
 const myFont = localFont({ src: "../../fonts/GTWalsheimPro-Bold.woff2" });
 
@@ -13,12 +11,9 @@ const instructors = [
   "/guitar.png",
   "/guitar2.png",
   "/guitar3.png",
-  "/guitar.png",
-  "/guitar2.png",
-  "/guitar3.png",
-  "/guitar.png",
-  "/guitar2.png",
-  "/guitar3.png",
+];
+
+const instructors2 = [
   "/guitar.png",
   "/guitar2.png",
   "/guitar3.png",
@@ -53,7 +48,52 @@ export default function Instructors() {
         </p>
       </div>
 
-      <Swiper
+      <div className={styles.slider}>
+        <div className={styles.slideTrack}>
+          {instructors.map((instructor, index) => (
+            <div className={styles.instructorsWrapper} key={index}>
+              <div className={styles.coursesImageOverlay}>
+                <h3
+                  className={`${styles.coursesImageOverlayHeader} ${myFont.className}`}
+                >
+                  Guitar Beginners <br />
+                  Full course
+                </h3>
+                <p className={styles.coursesImageOverlayBody}>Melanie Johns</p>
+              </div>
+              <Image
+                src={instructor}
+                alt="instructor image"
+                fill
+                className={styles.instructor}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.slideTrackScroll}>
+          {instructors2.map((instructor, index) => (
+            <div className={styles.instructorsWrapper} key={index}>
+              <div className={styles.coursesImageOverlay}>
+                <h3
+                  className={`${styles.coursesImageOverlayHeader} ${myFont.className}`}
+                >
+                  Guitar Beginners <br />
+                  Full course
+                </h3>
+                <p className={styles.coursesImageOverlayBody}>Melanie Johns</p>
+              </div>
+              <Image
+                src={instructor}
+                alt="instructor image"
+                fill
+                className={styles.instructor}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* <Swiper
         loop={true}
         slidesPerView="auto"
         spaceBetween={0}
@@ -87,7 +127,7 @@ export default function Instructors() {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
 
       <div className={styles.viewAllInstructorsButtonWrapper}>
         <button className={styles.viewAllInstructorsButton}>
